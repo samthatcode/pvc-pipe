@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import { Home } from './pages'
 
 function App() {
   const [user, setUser] = useState('Samthatcode')
 
   return (
-    <div className="text-primary border-secondary bg-darkGrey font-poppins">
-      Hi {user}, welcome to PVC Pipe
+    <div className="font-poppins">
+      <Home />
     </div>
   )
 }
