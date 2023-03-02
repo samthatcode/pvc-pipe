@@ -20,6 +20,11 @@ module.exports = {
         'lightYellow': '#FFF6DA', /* light yellow */
         'darkGrey': '#322F2F', /* dark grey */
         'lightGrey': '#009A491A', /* light grey */
+        'almostWhite': '#F5F5F5', /*almost white */
+        'greyText': '#4A4242', /* grey text*/
+        'iconFindColor': '#308a69', /* icon find color*/
+        'iconRequestColor': '#185e4d', /* icon request color */
+        'iconDeliveryColor': '#077821', /* icon delivery color */
       },
       textDecorationThickness: {
         4: '4px',
