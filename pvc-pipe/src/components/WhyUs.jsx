@@ -4,7 +4,7 @@ import { whyUsData } from '../data'
 const WhyUs = () => {
   return (
     <div>
-        <div className='font-semibold text-4xl custom-underline text-center my-20'>
+        <div className='font-semibold text-4xl custom-underline text-center mx-2 my-20'>
             Why <span className='text-primary'>Choose us?</span>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mx-4 md:mx-28'>
