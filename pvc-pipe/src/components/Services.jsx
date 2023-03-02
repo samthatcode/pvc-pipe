@@ -1,4 +1,6 @@
-import React from "react";
+import collect from "../assets/images/collect.png"
+import logistics from "../assets/images/logistics.png"
+import deliver from "../assets/images/deliver.png";
 
 const Services = () => {
   return (
@@ -22,7 +24,7 @@ const Services = () => {
         <div className="lg:w-1/2">
           <img
             className="rounded"
-            src="src/assets/images/collect.png"
+            src={collect}
             alt="Collect PVC"
           ></img>
         </div>
@@ -33,7 +35,7 @@ const Services = () => {
         <div className="mr-6 lg:w-1/2">
           <img
             className="mb-8 rounded"
-            src="src/assets/images/logistics.png"
+            src={logistics}
             alt="Logistics PVC"
           ></img>
         </div>
@@ -67,7 +69,7 @@ const Services = () => {
         <div className="lg:w-1/2">
           <img
             className="rounded"
-            src="src/assets/images/deliver.png"
+            src={deliver}
             alt="Deliver PVC"
           ></img>
         </div>
