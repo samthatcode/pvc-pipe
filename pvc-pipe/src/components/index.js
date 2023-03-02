@@ -7,3 +7,4 @@ export { default as HowItWorks } from './HowItWorks'
 export { default as Testimonials } from './Testimonials'
 export { default as WhyUs } from './WhyUs'
 
+export { default as Footer } from './Footer'

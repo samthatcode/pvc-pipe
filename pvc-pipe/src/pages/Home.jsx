@@ -1,5 +1,14 @@
 import React from "react";
-import { About, Hero,, HowItWorks Navbar, Services, Testimonials, WhyUs } from "../components";
+import {
+  About,
+  Hero,
+  HowItWorks,
+  Navbar,
+  Services,
+  Testimonials,
+  WhyUs,
+  Footer,
+} from "../components";
 
 const Home = () => {
   return (
@@ -11,6 +20,7 @@ const Home = () => {
       <About />
       <WhyUs />
       <Testimonials />
+      <Footer />
     </div>
   );
 };
