@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full bg-primary text-white mx-auto lg:px-auto sm:px-20 transition duration-500 flex justify-center h-fit`}>
-      <div className={`flex w-full fixed md:static max-w-[1200px] mx-auto justify-between transition duration-500 backdrop-blur h-16 px-4 md:px-0 z-20`}>
+      <div className={`flex w-full bg-primary/50 fixed md:static max-w-[1200px] mx-auto justify-between transition duration-500 backdrop-blur h-16 px-4 md:px-0 z-[99]`}>
 
         {/* Brand Logo */}
         <div className='flex my-auto'>

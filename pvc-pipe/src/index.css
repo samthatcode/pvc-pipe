@@ -9,3 +9,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+.custom-underline {
+  position: relative;
+}
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  width: 5rem;
+  margin-left: 48%;
+  height: 4px;
+  display: flex;
+  align-self: flex-end;
+  background-color: #009A49;
+}
