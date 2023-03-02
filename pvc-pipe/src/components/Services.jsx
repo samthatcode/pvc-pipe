@@ -14,9 +14,9 @@ const Services = () => {
           </div>
           <br />
           <div className="mb-8 text-xl">
-            Our team makes sure your card is being collected <br />
-            upon getting the notification to request for your voters card.
-            <br /> we are happy to ensure that your voice is heard.
+            Our team makes sure your card is being collected upon getting the
+            notification to request for your voters card. we are happy to ensure
+            that your voice is heard.
           </div>
         </div>
         <div className="lg:w-1/2">
@@ -30,7 +30,7 @@ const Services = () => {
       <br />
       <br />
       <div className="flex  flex-col lg:flex-row">
-        <div className="lg:w-1/2">
+        <div className="mr-6 lg:w-1/2">
           <img
             className="mb-8 rounded"
             src="src/assets/images/logistics.png"
