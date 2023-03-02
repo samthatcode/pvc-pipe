@@ -2,10 +2,10 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="h-auto w-full bg-lightGrey px-20 py-10">
-      <div className="py-15 mb-8 text-center text-2xl font-semibold">
-        Our &nbsp;
-        <span className="text-primary underline decoration-4">Services</span>
+    <div className="h-auto w-full bg-lightGrey px-20 py-14" id="services">
+      <div className="mb-24 text-center text-2xl font-semibold custom-underline">
+        Our{" "}
+        <span className="text-primary">Services</span>
       </div>
       <div className="flex  flex-col lg:flex-row">
         <div className="lg:mr-4 lg:w-1/2">
@@ -54,7 +54,7 @@ const Services = () => {
       <br />
       <div className="flex  flex-col lg:flex-row">
         <div className="lg:mr-4 lg:w-1/2">
-          <div className="text-3xl text-primary ">
+          <div className="text-3xl text-primary">
             Deliver it to your door step.
           </div>{" "}
           <br />

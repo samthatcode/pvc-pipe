@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     backgroundImage: {
       'hero': "url(./assets/images/hero.png)",
-
+      'about': "url(./assets/images/about.png)"
     },
     fontFamily: {
       'poppins': ['Poppins', 'sans-serif']
