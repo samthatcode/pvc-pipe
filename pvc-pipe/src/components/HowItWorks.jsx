@@ -15,7 +15,7 @@ const HowItWorks = () => {
         <div className="grid place-items-center text-center ">
           <img
             src={find}
-            className="mb-1 h-10 w-10 rounded bg-iconFindColor p-3 font-bold"
+            className="mb-1 h-14 w-14 rounded bg-iconFindColor p-3 font-bold"
           />
           <div className="my-4 font-semibold text-greyText text-xl md:text-2xl">Find PVC</div>
           <div className="mb-4 text-lg md:text-xl">
@@ -26,7 +26,7 @@ const HowItWorks = () => {
         <div className="grid place-items-center text-center sm:grid-cols-1 ">
           <img
             src={request}
-            className="mb-1 h-10 w-10 rounded bg-iconRequestColor p-3 font-bold"
+            className="mb-1 h-14 w-14 rounded bg-iconRequestColor p-3 font-bold"
           />
           <div className="my-4 font-semibold text-greyText text-xl md:text-2xl">Request</div>
           <div className="mb-4 text-lg md:text-xl">
@@ -37,7 +37,7 @@ const HowItWorks = () => {
         <div className="grid place-items-center text-center sm:grid-cols-1 ">
           <img
             src={confirm}
-            className="mb-1 h-10 w-10 rounded bg-iconDeliveryColor p-3 font-bold"
+            className="mb-1 h-14 w-14 rounded bg-iconDeliveryColor p-3 font-bold"
           />
           <div className="my-4 font-semibold text-greyText text-xl md:text-2xl">
             Confirm Delivery
