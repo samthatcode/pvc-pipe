@@ -14,6 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        'whiteText': '#ffffff', /* white text */
         'primary': '#009A49', /* primary green */
         'secondary': '#ECBB00', /* yellow text */
         'bgGreen': '#009A4901', /* background green */

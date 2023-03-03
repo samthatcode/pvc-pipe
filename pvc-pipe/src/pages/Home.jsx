@@ -7,6 +7,7 @@ import {
   Services,
   Testimonials,
   WhyUs,
+  Newsletter,
   Footer,
 } from "../components";
 
@@ -20,6 +21,7 @@ const Home = () => {
       <About />
       <WhyUs />
       <Testimonials />
+      <Newsletter />
       <Footer />
     </div>
   );
