@@ -1,17 +1,20 @@
 import React from "react";
+import find from "../assets/icons/find.svg";
+import request from "../assets/icons/request.svg";
+import confirm from "../assets/icons/confirm.svg";
 
 const HowItWorks = () => {
   return (
     <div className="h-auto w-full bg-almostWhite px-20 py-10">
-      <div className="py-15 mb-8 text-center text-2xl font-semibold">
+      <div className="py-15 mb-8 text-center text-4xl font-semibold custom-underline">
         How &nbsp;
-        <span className="text-primary underline decoration-4">it works</span>
+        <span className="text-primary  decoration-4">it works</span>
       </div>
 
-      <div className="mr-4 grid content-between justify-items-center sm:grid-cols-1  lg:grid-cols-3  ">
+      <div className="mr-4 grid content-between justify-items-center sm:grid-cols-1  lg:grid-cols-3 md:grid-cols-2 ">
         <div className="grid place-items-center text-center ">
           <img
-            src="src/assets/icons/find.svg"
+            src={find}
             className="mb-1 h-10 w-10 rounded bg-iconFindColor p-3 font-bold"
           />
           <div className=" mb-4 font-semibold text-greyText">Find PVC</div>
@@ -22,7 +25,7 @@ const HowItWorks = () => {
         </div>
         <div className="grid place-items-center text-center sm:grid-cols-1 ">
           <img
-            src="src/assets/icons/request.svg"
+            src={request}
             className="mb-1 h-10 w-10 rounded bg-iconRequestColor p-3 font-bold"
           />
           <div className=" mb-4 font-semibold text-greyText">Request</div>
@@ -33,7 +36,7 @@ const HowItWorks = () => {
         </div>
         <div className="grid place-items-center text-center sm:grid-cols-1 ">
           <img
-            src="src/assets/icons/confirm.svg"
+            src={confirm}
             className="mb-1 h-10 w-10 rounded bg-iconDeliveryColor p-3 font-bold"
           />
           <div className=" mb-4 font-semibold text-greyText">

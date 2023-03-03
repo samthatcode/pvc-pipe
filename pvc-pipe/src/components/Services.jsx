@@ -5,7 +5,7 @@ import deliver from "../assets/images/deliver.png";
 const Services = () => {
   return (
     <div className="h-auto w-full bg-lightGrey px-20 py-14" id="services">
-      <div className="mb-24 text-center text-2xl font-semibold custom-underline">
+      <div className="mb-24 text-center text-4xl font-semibold custom-underline">
         Our{" "}
         <span className="text-primary">Services</span>
       </div>
