@@ -9,7 +9,9 @@ import {
   WhyUs,
   Newsletter,
   Footer,
+  FAQ,
 } from "../components";
+// import Accordion from "../components/Accordion";
 
 const Home = () => {
   return (
@@ -21,6 +23,7 @@ const Home = () => {
       <About />
       <WhyUs />
       <Testimonials />
+      <FAQ />
       <Newsletter />
       <Footer />
     </div>
