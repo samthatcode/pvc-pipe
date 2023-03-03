@@ -22,13 +22,13 @@ const Hero = () => {
           </div>
         </div>
         <div className="h-auto w-full bg-primary absolute bottom-0 px-20 py-10 ">
-        <div className="flex justify-between">
-          <div className="text-l text-white mr-5">
-            We have helped over <span className="text-secondary">1000 </span>
+        <div className="flex justify-around">
+          <div className="flex text-xl justify-center items-center text-center text-white mr-5">
+            We have helped over <span className="text-secondary mx-1">1000 </span>
             Nigerians get their without them leaving the house
           </div>
 
-          <button className=" rounded border ml-5 border-white py-2 px-4  text-whiteText transition duration-200 hover:scale-90">
+          <button className=" rounded border ml-5 border-white py-2 px-20  text-whiteText transition duration-200 hover:scale-90">
             View
           </button>
         </div>

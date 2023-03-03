@@ -30,3 +30,18 @@ export const whyUsData = [
         body: 'We are accountable for any form of mismanagement that comes with the delivery of your product. We will ensure you package is delivered safely.'
     }
 ]
+
+export const faqData = [
+    {
+      title: 'How long does it take to get my PVC delivered?',
+      content: `You can get your PVC within 72 hours of requesting for delivery and getting your order confirmed`
+    },
+    {
+      title: 'How do i change my delivery address and phone number?',
+      content: `You can get your PVC within 72 hours of requesting for delivery and getting your order confirmed`
+    },
+    {
+      title: 'What happens if i am not at home when the delivery man comes around?',
+      content: `You can get your PVC within 72 hours of requesting for delivery and getting your order confirmed`
+    }
+  ];
