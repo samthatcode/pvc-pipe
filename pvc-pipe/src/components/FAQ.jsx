@@ -6,7 +6,7 @@ const FAQ = () => {
     
     return (
       <div className=''>
-          <div className='font-semibold text-4xl custom-underline text-center mx-1 my-20'>
+          <div className='font-semibold text-3xl md:text-4xl custom-underline text-center mx-1 my-20'>
               Frequently <span className='text-primary'>Asked Questions</span>
           </div>
           <div className='w-[90%] mx-auto max-w-[75rem] flex flex-col justify-center'>
