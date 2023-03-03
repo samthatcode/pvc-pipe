@@ -4,6 +4,7 @@ import facebook from "../assets/icons/facebook.png";
 import twitter from "../assets/icons/twitter.png";
 import instagram from "../assets/icons/instagram.png";
 import linkedin from "../assets/icons/linkedin.png";
+import phone from "../assets/icons/phone.png";
 
 const Footer = () => {
   return (
@@ -63,9 +64,16 @@ const Footer = () => {
             LinkedIn
           </HashLink>
         </div>
+        <div className="flex items-center">
+          <img src={phone} className="h-5 w-5" />
+          <HashLink to="#" className="hover:text-darkGrey">
+            08037509822
+          </HashLink>
+        </div>
       </div>
       <br />
       <br />
+      <div className="mt-5 text-center">All rights reserved &copy; 2023</div>
     </div>
   );
 };
