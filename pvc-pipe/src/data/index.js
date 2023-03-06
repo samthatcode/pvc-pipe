@@ -59,6 +59,8 @@ export const personDetails =
   lga: 'Ikorodu',
   code: '16-27-02-004',
   dob: '12-02-1990',
+  sex: 'Male',
+  address: 'No 13, Adeyemi close, Obafemi Awolowo Way, Opposite Elephant House, Alausa off abuja high way.',
   pickupLocation: 'Lagos State'
 
 }

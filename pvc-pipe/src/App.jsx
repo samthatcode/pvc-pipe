@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { Home } from "./pages";
-import { DeliveryInProgress } from "./pages";
+import { Home, DeliveryInProgress, ConfirmSubmitRequest  } from "./pages";
 import { personDetails } from "./data/index.js";
 
 function App() {
@@ -17,8 +16,8 @@ function App() {
   return (
     <div className="font-poppins">
       {/* <Home /> */}
-
-      <DeliveryInProgress person={personDetailsDeliveryInput} />
+      {/* <DeliveryInProgress person={personDetailsDeliveryInput} /> */}
+      <ConfirmSubmitRequest person={personDetailsDeliveryInput} />
     </div>
   );
 }
