@@ -12,7 +12,7 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #009A4999;
+    background: #009a4999;
     border-radius: 100vh;
     border: 2px solid #edf2f7;
   }

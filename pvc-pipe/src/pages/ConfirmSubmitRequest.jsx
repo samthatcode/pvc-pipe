@@ -87,7 +87,7 @@ const ConfirmSubmitRequest = ({ person }) => {
             </div>
           </div>
           <div className="mt-5">
-            <button className="w-full rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-[66%]">
+            <button className="w-full rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-full">
               Confirm & Submit
             </button>
           </div>
