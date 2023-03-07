@@ -3,20 +3,17 @@ import {
   About,
   Hero,
   HowItWorks,
-  Navbar,
+  Layout,
   Services,
   Testimonials,
   WhyUs,
   Newsletter,
-  Footer,
   FAQ,
 } from "../components";
-// import Accordion from "../components/Accordion";
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <Hero />
       <Services />
       <HowItWorks />
@@ -25,8 +22,7 @@ const Home = () => {
       <Testimonials />
       <FAQ />
       <Newsletter />
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

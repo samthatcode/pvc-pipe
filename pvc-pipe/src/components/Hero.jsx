@@ -1,8 +1,8 @@
 
 const Hero = () => {
   return (
-    <div className="bg-hero h-screen bg-cover pb-8 pt-8" id="home">
-      <div className="flex flex-col justify-center items-center text-white h-full ">
+    <div className="h-screen pb-8 pt-8" id="home">
+      <div className="flex flex-col justify-center items-center text-white h-full bg-hero bg-top bg-cover mt-8">
         <div className="font-semibold text-2xl md:text-4xl text-center w-[90%] mb-4 md:mb-8">
           {" "}
           <span className="text-secondary">PVC Delivery </span>at the comfort of
