@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import open from './../assets/icons/hamburger.svg';
 
 const Navbar = () => {
   const navRef = useRef()
@@ -20,37 +21,37 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className='hidden md:flex font-poppins text-white my-auto items-center justify-between w-full max-w-[500px]'>
-          <HashLink to="#home" smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>Home</HashLink>
-          <HashLink to='#services' smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>Services</HashLink>
-          <HashLink to='#about' smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>About us</HashLink>
-          <HashLink to='#testimonials' smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>Testimonials</HashLink>
-          <HashLink to='#contact' smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>Contact us</HashLink>
+        <div className='hidden md:flex font-poppins text-white my-auto items-center justify-between w-full max-w-[600px]'>
+          <HashLink to="#home" smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Home</HashLink>
+          <HashLink to='#services' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Services</HashLink>
+          <HashLink to='#about' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>About us</HashLink>
+          <HashLink to='#testimonials' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Testimonials</HashLink>
+          <HashLink to='#contact' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Contact us</HashLink>
         </div>
 
         {/* Mobile nav & toggler */}
         <div className='flex md:hidden z-20'>
-          <button onClick={showMenu} className="flex pt-[1.3rem] text-secondary absolute right-2 md:hidden p-3 transition active:scale-90">
-            Open
+          <button onClick={showMenu} className="flex h-16 justify-center items-center text-secondary absolute right-2 md:hidden p-3 transition active:scale-90">
+            <img src={open} alt="Open Nav" />
           </button>
           <div ref={navRef} className={`flex translate-x-[100%]  bg-primary md:hidden transition flex-col w-[70%] items-center font-body uppercase my-auto h-screen fixed top-0 right-0`}>
             <div className='flex justify-center mb-4 mt-[50%]' onClick={showMenu}>
-              <HashLink to="#home" smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')} end>Home</HashLink>
+              <HashLink to="#home" smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Home</HashLink>
             </div>
             <div className='flex justify-center my-4' onClick={showMenu}>
-              <HashLink to='#services' smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>Services</HashLink>
+              <HashLink to='#services' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Services</HashLink>
             </div>
             <div className='flex justify-center my-4' onClick={showMenu}>
-              <HashLink to='#about' smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>About Us</HashLink>
+              <HashLink to='#about' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>About Us</HashLink>
             </div>
             <div className='flex justify-center my-4' onClick={showMenu}>
-              <HashLink to='#testimonials' smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>Testimonials</HashLink>
+              <HashLink to='#testimonials' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Testimonials</HashLink>
             </div>
             <div className='flex justify-center my-4' onClick={showMenu}>
-              <HashLink to='#contact' smooth className={({ isActive }) => (isActive ? 'px-4 underline decoration-2 underline-offset-4' : 'px-4 hover:underline decoration-2 underline-offset-4')}>Contact Us</HashLink>
+              <HashLink to='#contact' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Contact Us</HashLink>
             </div>
-            <button onClick={showMenu} className="flex absolute text-secondary right-2 md:hidden p-6 ease-in transition duration-500 active:scale-90">
-              Close
+            <button onClick={showMenu} className="flex absolute text-secondary md:hidden p-2 ease-in transition duration-500 font-bold text-4xl cursor-pointer top-1 scale-110 active:scale-110 right-3">
+              &times;
             </button>
           </div>
         </div>
