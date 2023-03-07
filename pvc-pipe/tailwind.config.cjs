@@ -26,6 +26,7 @@ module.exports = {
         'iconFindColor': '#308a69', /* icon find color*/
         'iconRequestColor': '#185e4d', /* icon request color */
         'iconDeliveryColor': '#077821', /* icon delivery color */
+        'textInputColor': '#F0F8F5', /* text input color */
       },
       textDecorationThickness: {
         4: '4px',

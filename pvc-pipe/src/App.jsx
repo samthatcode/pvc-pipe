@@ -1,17 +1,25 @@
-import { useState } from 'react'
-import './App.css'
-import { Home } from './pages'
-import DeliveryDetails from './pages/DeliveryDetails'
+import { useState, useEffect } from "react";
+import "./App.css";
+import { Home, DeliveryInProgress, ConfirmSubmitRequest  } from "./pages";
+import { personDetails } from "./data/index.js";
 
 function App() {
-  const [user, setUser] = useState('Samthatcode')
+  const [user, setUser] = useState("samthatcode");
+  const [personDetailsDeliveryInput, setpersonDetailsDeliveryInput] = useState(
+    {}
+  );
+
+  useEffect(() => {
+    setpersonDetailsDeliveryInput(personDetails);
+  }, []);
 
   return (
     <div className="font-poppins">
       {/* <Home /> */}
-      <DeliveryDetails />
+      {/* <DeliveryInProgress person={personDetailsDeliveryInput} /> */}
+      <ConfirmSubmitRequest person={personDetailsDeliveryInput} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
