@@ -47,7 +47,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                     {person.firstName} {person.lastName}
                   </div>
                 </div>
-                <div className="flex gap-5">
+                <div className="flex gap-4">
                   <div className="">Sex:</div>
                   <div className="text-l ml-10 font-poppins font-bold text-primary">
                     {person.sex}
@@ -55,11 +55,11 @@ const ConfirmSubmitRequest = ({ person }) => {
                 </div>
                 <div className="flex">
                   <div className="">VIN no:</div>
-                  <div className="text-l ml-10 font-poppins font-bold text-primary">
+                  <div className="text-l ml-9 font-poppins font-bold text-primary">
                     {person.vinNo}
                   </div>
                 </div>
-                <div className="flex gap-3">
+                <div className="flex gap-1">
                   <div className="">L.G.A:</div>
                   <div className="text-l ml-10 font-poppins font-bold text-primary">
                     {person.lga}
