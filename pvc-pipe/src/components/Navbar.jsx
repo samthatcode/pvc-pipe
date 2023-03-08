@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className={`flex w-full bg-primary fixed md:static max-w-[1200px] mx-auto justify-between transition duration-500 h-16 px-4 md:px-0`}>
 
         {/* Brand Logo */}
-        <div className='flex my-auto'>
+        <div className='flex my-auto font-semibold'>
           <Link to='/' className={``}>
             PVC Pipe
           </Link>
