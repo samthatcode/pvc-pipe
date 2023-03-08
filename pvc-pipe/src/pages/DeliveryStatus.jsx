@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Layout } from '../components';
-import milestone from './../assets/icons/milestone.svg'
-import milestoneIn from './../assets/icons/milestoneIn.svg'
-import milestoneStart from './../assets/icons/milestoneStart.svg'
 import status1 from './../assets/icons/status1.svg'
 import status2 from './../assets/icons/status2.svg'
 import status2In from './../assets/icons/status2_in.svg'
