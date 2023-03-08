@@ -24,6 +24,7 @@ function App() {
           photo: data.picture.large,
           sex: data.gender,
           phoneNumber: data.phone,
+          email: data.email,
           vinNo: generateVinNo(),
           dob: new Date(data.dob.date).toLocaleDateString("en-US", {
             year: "numeric",
@@ -78,7 +79,10 @@ function App() {
           path="/track"
           element={<DeliveryInProgress person={personDetailsInput} />}
         />
-        <Route path="/details" element={<DeliveryDetails />} />
+        <Route
+          path="/details"
+          element={<DeliveryDetails person={personDetailsInput} />}
+        />
         <Route
           path="/confirm"
           element={<ConfirmSubmitRequest person={personDetailsInput} />}
