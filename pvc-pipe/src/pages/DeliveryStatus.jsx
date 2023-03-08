@@ -18,8 +18,6 @@ const DeliveryStatus = () => {
   
   DeliveryStatus.defaultProps = {    
     order: "000156",    
-    eyeColor: "deepblue",    
-    age: "120"
   }
   return (
     <Layout>
