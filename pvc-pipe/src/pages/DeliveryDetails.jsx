@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { Layout } from "../components";
 
-const DeliveryDetails = ({ person }) => {
+const DeliveryDetails = () => {
   return (
     <Layout>
       <div className="min-h-screen pt-16">
@@ -19,7 +20,7 @@ const DeliveryDetails = ({ person }) => {
                     className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                     id="name"
                     name="name"
-                    value={`${person.firstName} ${person.lastName}`}
+                    value={``}
                     type="text"
                     placeholder="e.g Abdrahman Oladimeji"
                   />
@@ -32,9 +33,9 @@ const DeliveryDetails = ({ person }) => {
                     className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                     id="name"
                     name="name"
-                    value={person.phoneNumber}
+                    value={``}
                     type="text"
-                    placeholder="e.g Abdrahman Oladimeji"
+                    placeholder="e.g 09023600083"
                   />
                 </div>
                 <div className="mb-4 flex flex-col">
@@ -45,9 +46,9 @@ const DeliveryDetails = ({ person }) => {
                     className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                     id="name"
                     name="name"
-                    value={person.email}
+                    value={``}
                     type="text"
-                    placeholder="e.g Abdrahman Oladimeji"
+                    placeholder="e.g samthatcode@gmail.com"
                   />
                 </div>
                 <div className="mb-4 flex flex-col">
@@ -58,9 +59,9 @@ const DeliveryDetails = ({ person }) => {
                     className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                     id="name"
                     name="name"
-                    value={person.address}
+                    value={``}
                     type="text"
-                    placeholder="e.g Abdrahman Oladimeji"
+                    placeholder="e.g No 13, Adeyemi close, Obafemi Awolowo Way, Opposite Elephant House, Alausa off abuja hih way"
                   />
                 </div>
                 <div className="mb-4 flex flex-col">
@@ -84,10 +85,12 @@ const DeliveryDetails = ({ person }) => {
                     placeholder="e.g Abdrahman Oladimeji"
                   />
                 </div>
-                <div className="mt-10 mb-20 flex">
-                  <button className="w-full rounded-lg bg-primary py-2 text-white hover:scale-95 active:scale-100">
-                    Submit
-                  </button>
+                <div className="mt-10 mb-20 flex w-full">
+                  <Link to='/confirm' className="w-full">
+                    <button className="w-full transition duration-200 rounded-lg bg-primary py-2 text-white hover:scale-95 active:scale-100">
+                      Submit
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

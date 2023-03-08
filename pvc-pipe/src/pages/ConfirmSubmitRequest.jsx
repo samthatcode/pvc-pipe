@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "../components";
 
 const ConfirmSubmitRequest = ({ person }) => {
@@ -19,7 +20,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                 You are also confirming that all details are accurate
               </div>
             </div>
-            <div className="max-w-640 container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
+            <div className="max-w-[800px] container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
               <div className="mb-4 flex justify-between ">
                 <div className="font-poppins text-xl font-bold">
                   Shipping Address
@@ -31,7 +32,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                 <div className="mt-9 text-primary">{person.phoneNumber}</div>
               </div>
             </div>
-            <div className="max-w-640 container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
+            <div className="max-w-[800px] container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
               <div className="mb-4 flex justify-between ">
                 <div className="font-poppins text-xl font-bold">
                   PVC Requested
@@ -73,22 +74,24 @@ const ConfirmSubmitRequest = ({ person }) => {
                 </div>
               </div>
             </div>
-            <div className="max-w-640 container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
+            <div className="max-w-[800px] container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
               <div className="mb-4 flex justify-between ">
                 <div className="font-poppins text-xl font-bold">
                   Payment Method
                 </div>
                 <div className="text-sm text-secondary">Edit</div>
               </div>
-              <div className="flex gap-40">
+              <div className="flex gap-20 md:gap-40">
                 <div className="text-sm text-[#01301D80]">Cash on delivery</div>
                 <div className="text-sm font-semibold text-primary">#2500</div>
               </div>
             </div>
             <div className="mt-5">
-              <button className="w-full rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-full">
-                Confirm & Submit
-              </button>
+              <Link to='/status'>
+                <button className="w-full max-w-[800px] rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-full">
+                  Confirm & Submit
+                </button>
+              </Link>
             </div>
           </div>
         </div>

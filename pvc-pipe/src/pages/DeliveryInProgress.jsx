@@ -1,21 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "../components";
-import { Navbar, Footer } from "../components";
 
 const DeliveryInProgress = ({ person }) => {
   return (
     <Layout>
-      <div className="overflow-hidden">
-        <div className="h-56 w-auto bg-lightYellow pt-20 ">
+      <div className="">
+        <div className="h-56 mb-20 md:mb-0 w-auto bg-lightYellow pt-20 ">
           <img
             src={person?.photo}
             alt="Person"
-            className="ml-20 mt-14 h-40 w-40 rounded-full border-4  border-green-500 "
+            className="ml-6 md:ml-20 mt-14 h-40 w-40 rounded-full border-4  border-green-500 "
           />
         </div>
 
         <div className="bg-inherit">
-          <div className="ml-60  mb-10 mt-14 font-poppins font-semibold">
+          <div className="ml-6 md:ml-72 mt-14 md:mt-0 mb-10 font-poppins font-semibold">
             <div className="mb-4 mt-4 text-2xl text-[#10442F]">
               Delivery in Progress
             </div>
@@ -152,10 +152,12 @@ const DeliveryInProgress = ({ person }) => {
               </div>
             </div>
             <div className="m-7 pt-10">
-              <button className="w-full rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-[66%]">
-                Track Delivery
-              </button>
-              <p className="text-sm">Click to track delivery progress</p>
+              <Link to="/details">
+                <button className="w-full rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-[66%]">
+                  Track Delivery
+                </button>
+              </Link>
+              <p className="text-sm mt-3 text-center md:text-left font-poppins text-[#80978E]">Click to track delivery progress</p>
             </div>
           </div>
         </div>
