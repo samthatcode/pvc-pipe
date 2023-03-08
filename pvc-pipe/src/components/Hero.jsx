@@ -46,7 +46,7 @@ const Hero = () => {
           <span className="text-secondary">PVC Delivery </span>at the comfort of
           your home
         </div>
-        <div className="text-base md:text-lg max-w-[64ch] text-center w-[90%] mb-4 sm:mb-8 md:mb-16">
+        <div className="mb-4 w-[90%] max-w-[64ch] text-center text-base sm:mb-8 md:mb-16 md:text-lg">
           Making sure your pvc is delivered and given to you at the comfort of
           your home, your voice must be heard.
         </div>
@@ -72,13 +72,14 @@ const Hero = () => {
         <div className="hidden md:flex h-auto w-full bg-primary absolute -bottom-14 sm:bottom-0 px-6 md:px-20 py-4 md:py-10 ">
           <div className="flex flex-col md:flex-row justify-around">
             <div>
-              <div className="text-[1rem] md:text-[1.375rem] text-center py-auto md:text-left text-white mr-0 md:mr-5">
-                We have helped over <span className="text-secondary mx-1">1000 </span>
+              <div className="py-auto mr-0 text-center text-[1rem] text-white md:mr-5 md:text-left md:text-[1.375rem]">
+                We have helped over
+                <span className="mx-1 text-secondary">1000 </span>
                 Nigerians get their PVC without them leaving the house
               </div>
             </div>
-            <div className="flex justify-center mt-4 md:mt-0">
-              <button className="rounded border w-full md:w-fit ml-0 md:ml-5 border-white py-1 px-20  text-white transition duration-200 hover:scale-90">
+            <div className="mt-4 flex justify-center md:mt-0">
+              <button className="ml-0 w-full rounded border border-white py-1 px-20 text-white transition  duration-200 hover:scale-90 md:ml-5 md:w-fit">
                 View
               </button>
             </div>
@@ -87,7 +88,6 @@ const Hero = () => {
       </div>
       {verifyModal && <VerifyModal verifyModal={verifyModal} setVerifyModal={setVerifyModal} notify={notify} num={phoneNumber} />}
     </div>
-
   );
 };
 
