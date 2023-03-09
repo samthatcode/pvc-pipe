@@ -20,7 +20,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                 You are also confirming that all details are accurate
               </div>
             </div>
-            <div className="max-w-[800px] container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
+            <div className="container mb-5 h-auto w-full max-w-[800px] overflow-hidden rounded-md border border-[#80978E] p-5">
               <div className="mb-4 flex justify-between ">
                 <div className="font-poppins text-xl font-bold">
                   Shipping Address
@@ -32,7 +32,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                 <div className="mt-9 text-primary">{person.phoneNumber}</div>
               </div>
             </div>
-            <div className="max-w-[800px] container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
+            <div className="container mb-5 h-auto w-full max-w-[800px] overflow-hidden rounded-md border border-[#80978E] p-5">
               <div className="mb-4 flex justify-between ">
                 <div className="font-poppins text-xl font-bold">
                   PVC Requested
@@ -74,7 +74,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                 </div>
               </div>
             </div>
-            <div className="max-w-[800px] container mb-5 h-auto w-full overflow-hidden rounded-md border border-[#80978E] p-5">
+            <div className="container mb-5 h-auto w-full max-w-[800px] overflow-hidden rounded-md border border-[#80978E] p-5">
               <div className="mb-4 flex justify-between ">
                 <div className="font-poppins text-xl font-bold">
                   Payment Method
@@ -87,7 +87,7 @@ const ConfirmSubmitRequest = ({ person }) => {
               </div>
             </div>
             <div className="mt-5">
-              <Link to='/status'>
+              <Link to="/status">
                 <button className="w-full max-w-[800px] rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-full">
                   Confirm & Submit
                 </button>
