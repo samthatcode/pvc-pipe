@@ -56,6 +56,7 @@ export const personDetails =
   phoneNumber: '081-55564-466',
   vinNo: '1239087444',
   state: 'Lagos State',
+  email: 'example@yahoo.com',
   lga: 'Ikorodu',
   code: '16-27-02-004',
   dob: '12-02-1990',
