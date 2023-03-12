@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { authentication } from '../config'
+import { RecaptchaVerifier, signInWithPhoneNumber} from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import VerifyModal from './VerifyModal';
@@ -6,10 +8,10 @@ import VerifyModal from './VerifyModal';
 const Hero = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [verifyModal, setVerifyModal] = useState(false);
-  // 🦄
+
   const toastParams = {
     position: "top-right",
-    autoClose: 3000,
+    autoClose: 2500,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: false,
@@ -18,7 +20,7 @@ const Hero = () => {
     theme: "light",
     }
   const notify = (val) => toast.success(`${val}`, toastParams);
-  const warn = (val) => toast.danger(`${val}`, toastParams);
+  const warn = (val) => toast.error(`${val}`, toastParams);
   const inform = (val) => toast.info(`${val}`, toastParams);
 
     const handleChange = (e)=> {
@@ -33,11 +35,31 @@ const Hero = () => {
       } else {
         const numValue = parseInt(phoneNumber);
         notify(`Sending verification code to 0${numValue}`);
-        setTimeout(() => {
-          setVerifyModal(!verifyModal);
-        }, 3000);
+        const intNum = `+234${numValue}`
+        window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
+          'size': 'invisible',
+          'callback': (response) => {
+          }
+        }, authentication);
+        notify(intNum);
+        let appVerifier = window.recaptchaVerifier;
+        signInWithPhoneNumber(authentication, intNum, appVerifier)
+          .then((confirmationResult) => {
+            // SMS sent. Prompt user to type the code from the message, then sign the
+            // user in with confirmationResult.confirm(code).
+            window.confirmationResult = confirmationResult;
+            notify("Verification code sent, check your phone");
+            setVerifyModal(!verifyModal);
+          }).catch((error) => {
+            // Error; SMS not sent
+            warn(error)
+          });
+        // setTimeout(() => {
+        //   setVerifyModal(!verifyModal);
+        // }, 3000);
       }
     }
+
   return (
     <div className="h-screen pb-8 pt-8" id="home">
       <div className="flex flex-col justify-center items-center text-white h-full bg-hero bg-top bg-cover mt-8">
@@ -50,25 +72,26 @@ const Hero = () => {
           Making sure your pvc is delivered and given to you at the comfort of
           your home, your voice must be heard.
         </div>
-        <form className="flex flex-col md:flex-row w-full justify-center items-center">
+        <form onSubmit={handleSubmit} className="flex flex-col md:flex-row w-full justify-center items-center">
           <div className="w-[90%] max-w-[644px] mb-4 md:mb-0">
             <input 
               value={phoneNumber} 
               onChange={handleChange} 
+              name="phoneNumber"
               type='text' 
               placeholder="Input your Phone Number or VIN" 
               className="outline-none text-gray-700 py-4 px-6 md:px-14 mt-0.5 rounded-md w-full md:w-[95%] max-w-[644px]" required />
           </div>
           <div className='w-[90%] md:w-fit'>
             <button 
-              onClick={handleSubmit} 
               type="submit" 
               className='bg-primary py-4 px-11 hover:scale-90 transition duration-200 rounded-md font-semibold text-lg w-full md:w-fit'>Find PVC</button>
           </div>
-          <div>
-          </div>
           <ToastContainer />
         </form>
+          <div className='flex z-50 mt-2'>
+            <div id='sign-in-button'></div>
+          </div>
         <div className="hidden md:flex h-auto w-full bg-primary absolute -bottom-14 sm:bottom-0 px-6 md:px-20 py-4 md:py-10 ">
           <div className="flex flex-col md:flex-row justify-around">
             <div>
@@ -86,7 +109,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {verifyModal && <VerifyModal verifyModal={verifyModal} setVerifyModal={setVerifyModal} notify={notify} num={phoneNumber} />}
+      {verifyModal && <VerifyModal verifyModal={verifyModal} setVerifyModal={setVerifyModal} notify={notify} warn={warn} num={phoneNumber} />}
     </div>
   );
 };

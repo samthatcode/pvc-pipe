@@ -9,7 +9,7 @@ const FAQ = () => {
       </div>
       <div className="mx-auto flex w-[90%] max-w-[75rem] flex-col justify-center">
         {faqData.map((faq, index) => (
-          <FAQCompo index={index} title={faq.title} content={faq.content} />
+          <FAQCompo key={index} title={faq.title} content={faq.content} />
         ))}
       </div>
     </div>
