@@ -54,9 +54,6 @@ const Hero = () => {
             // Error; SMS not sent
             warn(error)
           });
-        // setTimeout(() => {
-        //   setVerifyModal(!verifyModal);
-        // }, 3000);
       }
     }
 
