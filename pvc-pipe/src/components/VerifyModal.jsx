@@ -108,8 +108,8 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                     <div className='font-bold text-center w-fit font-poppins text-xl text-primary'>
                         Enter Verification code
                     </div>
-                    <div className='text-[#80978E] text-[0.6975rem]'>
-                        Kindly enter  the 4 digits verification code sent  to {" "}
+                    <div className='text-[#80978E] text-[0.6975rem] text-center'>
+                        Kindly enter  the 6 digits verification code sent  to {" "}
                         <span className='text-[#03592C] font-bold'>({maskedNumber})</span>
                     </div>
                     <div>
@@ -122,7 +122,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num1Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-3 text-center w-[55px] h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -131,7 +131,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num2Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-3 text-center w-[55px] h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -140,7 +140,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num3Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-3 text-center w-[55px] h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -149,7 +149,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num4Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-3 text-center w-[55px] h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -158,7 +158,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num5Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-3 text-center w-[55px] h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -167,7 +167,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num6Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-3 text-center w-[55px] h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                             </div>
                             <div className="flex w-full">

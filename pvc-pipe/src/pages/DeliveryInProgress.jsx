@@ -165,12 +165,12 @@ const DeliveryInProgress = ({ person }) => {
             <div className="m-7 pt-10">
               <Link to="/details">
                 <button className="w-full rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-[66%]">
-                  Track Delivery
+                  Submit Request
                 </button>
               </Link>
-              <p className="mt-3 text-center font-poppins text-sm text-[#80978E] md:text-left">
-                Click to track delivery progress
-              </p>
+              <Link to="/status">
+                <p className="text-sm mt-3 text-center md:text-left font-poppins text-[#80978E]">Already requested? <span className="text-secondary font-bold hover:underline">Click to track delivery progress</span></p>
+              </Link>
             </div>
           </div>
         </div>
