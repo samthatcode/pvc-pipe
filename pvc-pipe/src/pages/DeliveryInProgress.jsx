@@ -6,16 +6,16 @@ const DeliveryInProgress = ({ person }) => {
   return (
     <Layout>
       <div className="">
-        <div className="h-56 mb-20 md:mb-0 w-auto bg-lightYellow pt-20 ">
+        <div className="mb-20 h-56 w-auto bg-lightYellow pt-20 md:mb-0 ">
           <img
             src={person?.photo}
             alt="Person"
-            className="ml-6 md:ml-20 mt-14 h-40 w-40 rounded-full border-4  border-green-500 "
+            className="ml-6 mt-14 h-40 w-40 rounded-full border-4 border-green-500  md:ml-20 "
           />
         </div>
 
         <div className="bg-inherit">
-          <div className="ml-6 md:ml-72 mt-14 md:mt-0 mb-10 font-poppins font-semibold">
+          <div className="ml-6 mt-14 mb-10 font-poppins font-semibold md:ml-72 md:mt-0">
             <div className="mb-4 mt-4 text-2xl text-[#10442F]">
               Delivery in Progress
             </div>
@@ -30,7 +30,7 @@ const DeliveryInProgress = ({ person }) => {
             <div className=" m-7 grid grid-cols-1 gap-4 md:grid-cols-2  lg:grid-cols-3">
               <div className="">
                 <label
-                  for="firstname"
+                  htmlFor="firstname"
                   className=" text-sm font-medium text-slate-700"
                 >
                   FIRST NAME:
@@ -40,11 +40,12 @@ const DeliveryInProgress = ({ person }) => {
                   type="text"
                   value={person.firstName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                  disabled
                 />
               </div>
               <div className="">
                 <label
-                  for="lastname"
+                  htmlFor="lastname"
                   className="text-sm font-medium text-slate-700"
                 >
                   LAST NAME:
@@ -54,13 +55,14 @@ const DeliveryInProgress = ({ person }) => {
                   type="text"
                   value={person.lastName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                  disabled
                 />
               </div>
             </div>
             <div className="m-7 ">
               <div className="">
                 <label
-                  for="phone"
+                  htmlFor="phone"
                   class=" mr-2 text-sm font-medium text-slate-700"
                 >
                   PHONE NO:
@@ -71,13 +73,14 @@ const DeliveryInProgress = ({ person }) => {
                   type="text"
                   value={person.phoneNumber}
                   className="mt-1 w-[100%] rounded-md  border border-slate-300 bg-textInputColor px-3 py-2  text-sm placeholder-slate-400 shadow-sm outline-none lg:w-[66%]"
+                  disabled
                 />
               </div>
             </div>
             <div className="m-7 grid grid-cols-1 gap-4 md:grid-cols-2  lg:grid-cols-3">
               <div className="">
                 <label
-                  for="state"
+                  htmlFor="state"
                   className=" text-sm font-medium text-slate-700"
                 >
                   STATE:
@@ -87,10 +90,14 @@ const DeliveryInProgress = ({ person }) => {
                   type="text"
                   value={person.state}
                   className="mt-1 w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                  disabled
                 />
               </div>
               <div className="">
-                <label for="lga" className="text-sm font-medium text-slate-700">
+                <label
+                  htmlFor="lga"
+                  className="text-sm font-medium text-slate-700"
+                >
                   L.G.A:
                 </label>
                 <input
@@ -98,6 +105,7 @@ const DeliveryInProgress = ({ person }) => {
                   type="text"
                   value={person.lga}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                  disabled
                 />
               </div>
             </div>
@@ -105,7 +113,7 @@ const DeliveryInProgress = ({ person }) => {
               <div className="m-7 grid grid-cols-1 gap-4 md:grid-cols-2  lg:grid-cols-3">
                 <div className="">
                   <label
-                    for="code"
+                    htmlFor="code"
                     className=" text-sm font-medium text-slate-700"
                   >
                     CODE:
@@ -115,11 +123,12 @@ const DeliveryInProgress = ({ person }) => {
                     type="text"
                     value={person.code}
                     className="mt-1 w-full rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                    disabled
                   />
                 </div>
                 <div className="">
                   <label
-                    for="dob"
+                    htmlFor="dob"
                     className=" text-sm font-medium text-slate-700"
                   >
                     DATE OF BIRTH:
@@ -129,6 +138,7 @@ const DeliveryInProgress = ({ person }) => {
                     type="text"
                     value={person.dob}
                     className="mt-1 w-[100%]  rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                    disabled
                   />
                 </div>
               </div>
@@ -137,7 +147,7 @@ const DeliveryInProgress = ({ person }) => {
             <div className="m-7">
               <div className="">
                 <label
-                  for="pickup"
+                  htmlFor="pickup"
                   className=" text-sm font-medium text-slate-700"
                 >
                   PICK-UP LOCATION:
@@ -148,6 +158,7 @@ const DeliveryInProgress = ({ person }) => {
                   type="text"
                   value={person.pickupLocation}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3 py-2 text-sm placeholder-slate-400  shadow-sm outline-none lg:w-[66%]"
+                  disabled
                 />
               </div>
             </div>
