@@ -43,7 +43,6 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.firstName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                  disabled
                 />
               </div>
               <div className="">
@@ -59,7 +58,6 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.lastName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                  disabled
                 />
               </div>
             </div>
@@ -78,7 +76,6 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={phoneNumber}
                   className="mt-1 w-[100%] rounded-md  border border-slate-300 bg-textInputColor px-3 py-2  text-sm placeholder-slate-400 shadow-sm outline-none lg:w-[66%]"
-                  disabled
                 />
               </div>
             </div>
@@ -96,7 +93,6 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.state}
                   className="mt-1 w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                  disabled
                 />
               </div>
               <div className="">
@@ -112,7 +108,6 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.lga}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                  disabled
                 />
               </div>
             </div>
@@ -131,7 +126,6 @@ const DeliveryInProgress = ({ person }) => {
                     disabled
                     value={person.code}
                     className="mt-1 w-full rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                    disabled
                   />
                 </div>
                 <div className="">
@@ -147,7 +141,6 @@ const DeliveryInProgress = ({ person }) => {
                     disabled
                     value={person.dob}
                     className="mt-1 w-[100%]  rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                    disabled
                   />
                 </div>
               </div>
@@ -168,7 +161,6 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.pickupLocation}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3 py-2 text-sm placeholder-slate-400  shadow-sm outline-none lg:w-[66%]"
-                  disabled
                 />
               </div>
             </div>

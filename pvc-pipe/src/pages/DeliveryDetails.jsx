@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Layout } from "../components";
 import React, { useState, useEffect } from "react";
 
-const DeliveryDetails = () => {
+const DeliveryDetails = ({ person }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -60,7 +60,7 @@ const DeliveryDetails = () => {
                       className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                       id="name"
                       name="name"
-                      value={``}
+                      value={person.name}
                       type="text"
                       placeholder="e.g Abdrahman Oladimeji"
                       required
