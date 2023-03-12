@@ -107,7 +107,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {!verifyModal && <VerifyModal verifyModal={verifyModal} setVerifyModal={setVerifyModal} notify={notify} warn={warn} num={phoneNumber} />}
+      {verifyModal && <VerifyModal verifyModal={verifyModal} setVerifyModal={setVerifyModal} notify={notify} warn={warn} num={phoneNumber} />}
     </div>
   );
 };

@@ -25,8 +25,9 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
     const num6Ref = useRef(null);
 
     const [timeLeft, setTimeLeft] = useState(35);
-
-    num1Ref.current.focus();
+    window.onload= function(){
+        num1Ref.current.focus()
+    }
     const handleChange = (e) => {
         const { name, value } = e.target;
         switch (name) {
