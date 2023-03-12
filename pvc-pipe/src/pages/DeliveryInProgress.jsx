@@ -8,16 +8,16 @@ const DeliveryInProgress = ({ person }) => {
   return (
     <Layout>
       <div className="">
-        <div className="h-56 mb-20 md:mb-0 w-auto bg-lightYellow pt-20 ">
+        <div className="mb-20 h-56 w-auto bg-lightYellow pt-20 md:mb-0 ">
           <img
             src={person?.photo}
             alt="Person"
-            className="ml-6 md:ml-20 mt-14 h-40 w-40 rounded-full border-4  border-green-500 "
+            className="ml-6 mt-14 h-40 w-40 rounded-full border-4 border-green-500  md:ml-20 "
           />
         </div>
 
         <div className="bg-inherit">
-          <div className="ml-6 md:ml-72 mt-14 md:mt-0 mb-10 font-poppins font-semibold">
+          <div className="ml-6 mt-14 mb-10 font-poppins font-semibold md:ml-72 md:mt-0">
             <div className="mb-4 mt-4 text-2xl text-[#10442F]">
               Delivery in Progress
             </div>
@@ -43,6 +43,7 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.firstName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                  disabled
                 />
               </div>
               <div className="">
@@ -58,6 +59,7 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.lastName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                  disabled
                 />
               </div>
             </div>
@@ -76,6 +78,7 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={phoneNumber}
                   className="mt-1 w-[100%] rounded-md  border border-slate-300 bg-textInputColor px-3 py-2  text-sm placeholder-slate-400 shadow-sm outline-none lg:w-[66%]"
+                  disabled
                 />
               </div>
             </div>
@@ -93,10 +96,14 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.state}
                   className="mt-1 w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                  disabled
                 />
               </div>
               <div className="">
-                <label htmlFor="lga" className="text-sm font-medium text-slate-700">
+                <label
+                  htmlFor="lga"
+                  className="text-sm font-medium text-slate-700"
+                >
                   L.G.A:
                 </label>
                 <input
@@ -105,6 +112,7 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.lga}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                  disabled
                 />
               </div>
             </div>
@@ -123,6 +131,7 @@ const DeliveryInProgress = ({ person }) => {
                     disabled
                     value={person.code}
                     className="mt-1 w-full rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                    disabled
                   />
                 </div>
                 <div className="">
@@ -138,6 +147,7 @@ const DeliveryInProgress = ({ person }) => {
                     disabled
                     value={person.dob}
                     className="mt-1 w-[100%]  rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
+                    disabled
                   />
                 </div>
               </div>
@@ -158,6 +168,7 @@ const DeliveryInProgress = ({ person }) => {
                   disabled
                   value={person.pickupLocation}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3 py-2 text-sm placeholder-slate-400  shadow-sm outline-none lg:w-[66%]"
+                  disabled
                 />
               </div>
             </div>
