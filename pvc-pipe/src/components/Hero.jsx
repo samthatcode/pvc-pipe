@@ -34,14 +34,13 @@ const Hero = () => {
         inform("Number must be 11 values")
       } else {
         const numValue = parseInt(phoneNumber);
-        notify(`Sending verification code to 0${numValue}`);
+        notify(`Requesting verification code on 0${numValue}`);
         const intNum = `+234${numValue}`
         window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
           'size': 'invisible',
           'callback': (response) => {
           }
         }, authentication);
-        notify(intNum);
         let appVerifier = window.recaptchaVerifier;
         signInWithPhoneNumber(authentication, intNum, appVerifier)
           .then((confirmationResult) => {
