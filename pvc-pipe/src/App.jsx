@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import DeliveryDetails from "./pages/DeliveryDetails";
 import DeliveryStatus from "./pages/DeliveryStatus";
 import axios from "axios";
+import { PhoneNumberProvider } from "./contexts/NumberContext";
 
 function App() {
   const [personDetailsInput, setpersonDetailsInput] = useState({});
@@ -69,6 +70,7 @@ function App() {
   }
 
   return (
+    <PhoneNumberProvider>
     <div className="font-poppins">
       <Routes>
         <Route path="/" element={<Home />} />
@@ -87,6 +89,7 @@ function App() {
         <Route path="/status" element={<DeliveryStatus />} />
       </Routes>
     </div>
+    </PhoneNumberProvider>
   );
 }
 

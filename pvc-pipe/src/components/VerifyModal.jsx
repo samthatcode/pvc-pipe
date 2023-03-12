@@ -26,6 +26,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
 
     const [timeLeft, setTimeLeft] = useState(35);
 
+    num1Ref.current.focus();
     const handleChange = (e) => {
         const { name, value } = e.target;
         switch (name) {
@@ -122,7 +123,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num1Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-xl sm:text-2xl mx-1 md:mx-3 text-center w-[35px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -131,7 +132,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num2Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-xl sm:text-2xl mx-1 md:mx-3 text-center w-[35px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -140,7 +141,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num3Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-xl sm:text-2xl mx-1 md:mx-3 text-center w-[35px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -149,7 +150,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num4Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-xl sm:text-2xl mx-1 md:mx-3 text-center w-[35px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -158,7 +159,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num5Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-xl sm:text-2xl mx-1 md:mx-3 text-center w-[35px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                                 <input
                                     type="number"
@@ -167,10 +168,10 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                                     onChange={handleChange}
                                     ref={num6Ref}
                                     autoComplete="off"
-                                    className="font-bold text-2xl mx-1 md:mx-3 text-center w-[30px] h-[30px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
+                                    className="font-bold text-xl sm:text-2xl mx-1 md:mx-3 text-center w-[35px] h-[40px] sm:w-[55px] sm:h-[55px] rounded-lg border-[0.6px] border-[#01301D]"
                                 />
                             </div>
-                            <div className="flex w-full">
+                            <div className="flex w-[90%]">
                                 <button onClick={handleSubmit} type='submit' className='text-white bg-primary cursor-pointer w-full py-3 rounded-lg text-xs hover:scale-95 active:scale-100 transition duration-200'>Verify & Proceed</button>
                             </div>
                             <div className="text-[#80978E] text-xs mt-4 cursor-pointer">

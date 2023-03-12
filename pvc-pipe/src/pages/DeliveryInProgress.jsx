@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../components";
+import { usePhoneNumber } from "../contexts/NumberContext";
 
 const DeliveryInProgress = ({ person }) => {
+  const { phoneNumber } = usePhoneNumber();
   return (
     <Layout>
       <div className="">
@@ -30,7 +32,7 @@ const DeliveryInProgress = ({ person }) => {
             <div className=" m-7 grid grid-cols-1 gap-4 md:grid-cols-2  lg:grid-cols-3">
               <div className="">
                 <label
-                  for="firstname"
+                  htmlFor="firstname"
                   className=" text-sm font-medium text-slate-700"
                 >
                   FIRST NAME:
@@ -38,13 +40,14 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="fname"
                   type="text"
+                  disabled
                   value={person.firstName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
                 />
               </div>
               <div className="">
                 <label
-                  for="lastname"
+                  htmlFor="lastname"
                   className="text-sm font-medium text-slate-700"
                 >
                   LAST NAME:
@@ -52,6 +55,7 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="lname"
                   type="text"
+                  disabled
                   value={person.lastName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
                 />
@@ -60,8 +64,8 @@ const DeliveryInProgress = ({ person }) => {
             <div className="m-7 ">
               <div className="">
                 <label
-                  for="phone"
-                  class=" mr-2 text-sm font-medium text-slate-700"
+                  htmlFor="phone"
+                  className=" mr-2 text-sm font-medium text-slate-700"
                 >
                   PHONE NO:
                 </label>
@@ -69,7 +73,8 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="pnumber"
                   type="text"
-                  value={person.phoneNumber}
+                  disabled
+                  value={phoneNumber}
                   className="mt-1 w-[100%] rounded-md  border border-slate-300 bg-textInputColor px-3 py-2  text-sm placeholder-slate-400 shadow-sm outline-none lg:w-[66%]"
                 />
               </div>
@@ -77,7 +82,7 @@ const DeliveryInProgress = ({ person }) => {
             <div className="m-7 grid grid-cols-1 gap-4 md:grid-cols-2  lg:grid-cols-3">
               <div className="">
                 <label
-                  for="state"
+                  htmlFor="state"
                   className=" text-sm font-medium text-slate-700"
                 >
                   STATE:
@@ -85,17 +90,19 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="state"
                   type="text"
+                  disabled
                   value={person.state}
                   className="mt-1 w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
                 />
               </div>
               <div className="">
-                <label for="lga" className="text-sm font-medium text-slate-700">
+                <label htmlFor="lga" className="text-sm font-medium text-slate-700">
                   L.G.A:
                 </label>
                 <input
                   id="lga"
                   type="text"
+                  disabled
                   value={person.lga}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
                 />
@@ -105,7 +112,7 @@ const DeliveryInProgress = ({ person }) => {
               <div className="m-7 grid grid-cols-1 gap-4 md:grid-cols-2  lg:grid-cols-3">
                 <div className="">
                   <label
-                    for="code"
+                    htmlFor="code"
                     className=" text-sm font-medium text-slate-700"
                   >
                     CODE:
@@ -113,13 +120,14 @@ const DeliveryInProgress = ({ person }) => {
                   <input
                     id="code"
                     type="text"
+                    disabled
                     value={person.code}
                     className="mt-1 w-full rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
                   />
                 </div>
                 <div className="">
                   <label
-                    for="dob"
+                    htmlFor="dob"
                     className=" text-sm font-medium text-slate-700"
                   >
                     DATE OF BIRTH:
@@ -127,6 +135,7 @@ const DeliveryInProgress = ({ person }) => {
                   <input
                     id="dob"
                     type="text"
+                    disabled
                     value={person.dob}
                     className="mt-1 w-[100%]  rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
                   />
@@ -137,7 +146,7 @@ const DeliveryInProgress = ({ person }) => {
             <div className="m-7">
               <div className="">
                 <label
-                  for="pickup"
+                  htmlFor="pickup"
                   className=" text-sm font-medium text-slate-700"
                 >
                   PICK-UP LOCATION:
@@ -146,6 +155,7 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="pickup"
                   type="text"
+                  disabled
                   value={person.pickupLocation}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3 py-2 text-sm placeholder-slate-400  shadow-sm outline-none lg:w-[66%]"
                 />
