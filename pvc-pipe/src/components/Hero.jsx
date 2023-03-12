@@ -4,9 +4,11 @@ import { RecaptchaVerifier, signInWithPhoneNumber} from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import VerifyModal from './VerifyModal';
+import { usePhoneNumber } from '../contexts/NumberContext';
 
 const Hero = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const { phoneNumber, updatePhoneNumber } = usePhoneNumber();
+  // const [phoneNumber, setPhoneNumber] = useState("");
   const [verifyModal, setVerifyModal] = useState(false);
 
   const toastParams = {
@@ -25,7 +27,7 @@ const Hero = () => {
 
     const handleChange = (e)=> {
       const cleanedValue = e.target.value.replace(/[^0-9]/g, '');
-      setPhoneNumber(cleanedValue);
+      updatePhoneNumber(cleanedValue);
     }
    
     const handleSubmit = (e) => {

@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../components";
+import { usePhoneNumber } from "../contexts/NumberContext";
 
 const DeliveryInProgress = ({ person }) => {
+  const { phoneNumber } = usePhoneNumber();
   return (
     <Layout>
       <div className="">
@@ -38,9 +40,9 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="fname"
                   type="text"
+                  disabled
                   value={person.firstName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                  disabled
                 />
               </div>
               <div className="">
@@ -53,9 +55,9 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="lname"
                   type="text"
+                  disabled
                   value={person.lastName}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                  disabled
                 />
               </div>
             </div>
@@ -63,7 +65,7 @@ const DeliveryInProgress = ({ person }) => {
               <div className="">
                 <label
                   htmlFor="phone"
-                  class=" mr-2 text-sm font-medium text-slate-700"
+                  className=" mr-2 text-sm font-medium text-slate-700"
                 >
                   PHONE NO:
                 </label>
@@ -71,9 +73,9 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="pnumber"
                   type="text"
-                  value={person.phoneNumber}
-                  className="mt-1 w-[100%] rounded-md  border border-slate-300 bg-textInputColor px-3 py-2  text-sm placeholder-slate-400 shadow-sm outline-none lg:w-[66%]"
                   disabled
+                  value={phoneNumber}
+                  className="mt-1 w-[100%] rounded-md  border border-slate-300 bg-textInputColor px-3 py-2  text-sm placeholder-slate-400 shadow-sm outline-none lg:w-[66%]"
                 />
               </div>
             </div>
@@ -88,9 +90,9 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="state"
                   type="text"
+                  disabled
                   value={person.state}
                   className="mt-1 w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                  disabled
                 />
               </div>
               <div className="">
@@ -103,9 +105,9 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="lga"
                   type="text"
+                  disabled
                   value={person.lga}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                  disabled
                 />
               </div>
             </div>
@@ -121,9 +123,9 @@ const DeliveryInProgress = ({ person }) => {
                   <input
                     id="code"
                     type="text"
+                    disabled
                     value={person.code}
                     className="mt-1 w-full rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                    disabled
                   />
                 </div>
                 <div className="">
@@ -136,9 +138,9 @@ const DeliveryInProgress = ({ person }) => {
                   <input
                     id="dob"
                     type="text"
+                    disabled
                     value={person.dob}
                     className="mt-1 w-[100%]  rounded-md border border-slate-300 bg-textInputColor px-3  py-2 text-sm placeholder-slate-400 shadow-sm outline-none"
-                    disabled
                   />
                 </div>
               </div>
@@ -156,9 +158,9 @@ const DeliveryInProgress = ({ person }) => {
                 <input
                   id="pickup"
                   type="text"
+                  disabled
                   value={person.pickupLocation}
                   className="mt-1  w-[100%] rounded-md border border-slate-300 bg-textInputColor px-3 py-2 text-sm placeholder-slate-400  shadow-sm outline-none lg:w-[66%]"
-                  disabled
                 />
               </div>
             </div>

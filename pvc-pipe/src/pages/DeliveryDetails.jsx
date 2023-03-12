@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { Layout } from "../components";
 import React, { useState, useEffect } from "react";
+import { usePhoneNumber } from "../contexts/NumberContext";
 
-const DeliveryDetails = () => {
+const DeliveryDetails = ({ person }) => {
+  const { phoneNumber } = usePhoneNumber();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -60,7 +62,7 @@ const DeliveryDetails = () => {
                       className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                       id="name"
                       name="name"
-                      value={``}
+                      value={`${person.firstName} ${person.lastName}`}
                       type="text"
                       placeholder="e.g Abdrahman Oladimeji"
                       required
@@ -79,7 +81,7 @@ const DeliveryDetails = () => {
                       className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                       id="name"
                       name="name"
-                      value={``}
+                      value={phoneNumber}
                       type="text"
                       placeholder="e.g 09023600083"
                       required
@@ -98,7 +100,7 @@ const DeliveryDetails = () => {
                       className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                       id="email"
                       name="email"
-                      value={email}
+                      value={person.email}
                       onChange={handleEmailChange}
                       type="email"
                       placeholder="example@gmail.com (click to edit & update)"
@@ -129,7 +131,7 @@ const DeliveryDetails = () => {
                       className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                       id="name"
                       name="name"
-                      value={``}
+                      value={person.pickupLocation}
                       type="text"
                       placeholder="e.g No 13, Adeyemi close, Obafemi Awolowo Way, Opposite Elephant House, Alausa off abuja hih way"
                       required
