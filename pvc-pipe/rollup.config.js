@@ -2,9 +2,9 @@
 export default {
     input: 'src/index.js',
     output: {
-      file: 'pvc-pipe/dist/bundle.js',
+      file: 'dist/bundle.js',
       format: 'cjs'
     },
-    external: ['react-paystack'] // Add the external module here
+    external: ['paystack'] // Add the external module here
   }
   
