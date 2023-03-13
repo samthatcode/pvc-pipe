@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { authentication } from '../config'
 import { RecaptchaVerifier, signInWithPhoneNumber} from "firebase/auth";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import VerifyModal from './VerifyModal';
 import { usePhoneNumber } from '../contexts/NumberContext';
 
 const Hero = () => {
+  const inputRef = useRef(null);
   const { phoneNumber, updatePhoneNumber } = usePhoneNumber();
-  // const [phoneNumber, setPhoneNumber] = useState("");
   const [verifyModal, setVerifyModal] = useState(false);
 
   const toastParams = {
@@ -36,8 +36,10 @@ const Hero = () => {
         inform("Number must be 11 values")
       } else {
         const numValue = parseInt(phoneNumber);
+        inputRef.current.value = '';
         notify(`Requesting verification code on 0${numValue}`);
         const intNum = `+234${numValue}`
+        
         window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
           'size': 'invisible',
           'callback': (response) => {
@@ -60,7 +62,7 @@ const Hero = () => {
 
   return (
     <div className="h-screen pb-8 pt-8" id="home">
-      <div className="flex flex-col justify-center items-center text-white h-full bg-hero bg-top bg-cover mt-8">
+      <div className="flex flex-col justify-center items-center text-white h-full bg-hero bg-top bg-cover bg-black/50 mt-8">
         <div className="font-semibold text-2xl md:text-4xl text-center w-[90%] mb-4 md:mb-8">
           {" "}
           <span className="text-secondary">PVC Delivery </span>at the comfort of
@@ -75,22 +77,23 @@ const Hero = () => {
             <input 
               value={phoneNumber} 
               onChange={handleChange} 
+              ref={inputRef}
               name="phoneNumber"
               type='text' 
               placeholder="Input your Phone Number or VIN" 
               className="outline-none text-gray-700 py-4 px-6 md:px-14 mt-0.5 rounded-md w-full md:w-[95%] max-w-[644px]" required />
           </div>
-          <div className='w-[90%] md:w-fit'>
+          <div className='w-[90%] md:w-fit flex'>
             <button 
+            onClick={handleSubmit}
               type="submit" 
-              className='bg-primary py-4 px-11 hover:scale-90 transition duration-200 rounded-md font-semibold text-lg w-full md:w-fit'>Find PVC</button>
+              className='bg-primary py-4 px-11 hover:scale-90 transition duration-200 rounded-md font-semibold text-lg w-full md:w-fit max-w-[644px] mx-auto'>Find PVC</button>
           </div>
-          <ToastContainer />
         </form>
           <div className='flex z-50 mt-2'>
             <div id='sign-in-button'></div>
           </div>
-        <div className="hidden md:flex h-auto w-full bg-primary absolute -bottom-14 sm:bottom-0 px-6 md:px-20 py-4 md:py-10 ">
+        <div className="hidden md:flex h-auto w-full bg-primary absolute -bottom-14 sm:bottom-0 px-6 md:px-20 py-4 md:py-6 ">
           <div className="flex flex-col md:flex-row justify-around">
             <div>
               <div className="py-auto mr-0 text-center text-[1rem] text-white md:mr-5 md:text-left md:text-[1.375rem]">
@@ -100,7 +103,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="mt-4 flex justify-center md:mt-0">
-              <button className="ml-0 w-full rounded border border-white py-1 px-20 text-white transition  duration-200 hover:scale-90 md:ml-5 md:w-fit">
+              <button className="ml-0 w-full rounded border border-white py-1 px-10 lg:px-20 text-white transition  duration-200 hover:scale-90 md:ml-5 md:w-fit">
                 View
               </button>
             </div>

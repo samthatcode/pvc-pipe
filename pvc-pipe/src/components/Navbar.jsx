@@ -8,6 +8,7 @@ const Navbar = () => {
   const showMenu = () => {
     navRef.current.classList.toggle('translate-x-[100%]');
   }
+  const pathname = window.location.pathname;
 
   return (
     <nav className={`fixed w-full bg-primary text-white mx-auto lg:px-auto sm:px-20 transition duration-500 flex justify-center z-10 h-fit`}>
@@ -22,11 +23,11 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className='hidden md:flex font-poppins text-white my-auto items-center justify-between w-full max-w-[600px]'>
-          <HashLink to="#home" smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Home</HashLink>
-          <HashLink to='#services' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Services</HashLink>
-          <HashLink to='#about' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>About us</HashLink>
-          <HashLink to='#testimonials' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Testimonials</HashLink>
-          <HashLink to='#contact' smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Contact us</HashLink>
+          <HashLink to={pathname === '/' ?"#home" : "/#home"} smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Home</HashLink>
+          <HashLink to={pathname === '/' ?"#services" : "/#services"} smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Services</HashLink>
+          <HashLink to={pathname === '/' ?"#about" : "/#about"} smooth className='px-4 hover:underline decoration-2 underline-offset-4'>About us</HashLink>
+          <HashLink to={pathname === '/' ?"#testimonials" : "/#testimonials"} smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Testimonials</HashLink>
+          <HashLink to={pathname === '/' ?"#contact" : "/#contact"} smooth className='px-4 hover:underline decoration-2 underline-offset-4'>Contact us</HashLink>
         </div>
 
         {/* Mobile nav & toggler */}
