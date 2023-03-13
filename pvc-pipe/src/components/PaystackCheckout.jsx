@@ -2,13 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PaystackConsumer } from 'react-paystack';
 
-// const config = {
-//     reference: (new Date()).getTime().toString(),
-//     email: "user@example.com",
-//     amount: 2500, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
-//     publicKey: 'pk_test_d56e5d99cfeea7107f91f241fadb5ac00ef8e4cb',
-//   };
-
 const PaystackCheckout = () => {
     const navigateTo = useNavigate();
     const [paymentEmail, setPaymentEmail] = useState('');
