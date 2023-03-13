@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../components";
 import { toast } from 'react-toastify';
-import PaystackCheckout from "../components/PaystackCheckout";
+// import PaystackCheckout from "../components/PaystackCheckout";
 import { usePaymentMethod } from "../contexts/PaymentContext";
 import { usePhoneNumber } from "../contexts/NumberContext";
 
@@ -148,7 +148,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                         </div>
                       </div>
                     </div>
-                    {paymentMethod === 'card' && <PaystackCheckout />}
+                    {/* {paymentMethod === 'card' && <PaystackCheckout />} */}
                   </div>)} 
 
                   {!editing && <div>
@@ -163,7 +163,6 @@ const ConfirmSubmitRequest = ({ person }) => {
               }
                   </div>}
             </div>
-            {paymentMethod === "cash" &&
             <div className="mt-5">
               <Link to="/status">
                 <button className="w-full max-w-[800px] rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-full">
@@ -171,7 +170,16 @@ const ConfirmSubmitRequest = ({ person }) => {
                 </button>
               </Link>
             </div>
-            }
+            
+            {/* {paymentMethod === "cash" &&
+              <div className="mt-5">
+                <Link to="/status">
+                  <button className="w-full max-w-[800px] rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-full">
+                    Confirm & Submit
+                  </button>
+                </Link>
+              </div>
+            } */}
           </div>
         </div>
       </div>
