@@ -1,20 +1,23 @@
 import { Link } from "react-router-dom";
 import { Layout } from "../components";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { usePhoneNumber } from "../contexts/NumberContext";
+import { usePaymentMethod } from "../contexts/PaymentContext";
+import PaystackCheckout from "../components/PaystackCheckout";
+// import { update } from "lodash";
 
 const DeliveryDetails = ({ person }) => {
+  const emailRef = useRef();
   const { phoneNumber } = usePhoneNumber();
+  const { paymentMethod, updatePaymentMethod } = usePaymentMethod();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const [updateEmail, setUpdateEmail] = useState(false);  // update email feild
 
-  // update email feild
-  const handleEmailChange = (event) => {
-    const value = event.target.value;
-    setEmail(value);
-    setIsButtonDisabled(!validateEmail(value) || isButtonClicked);
+  const handleEmailChange = (e) => {
+    e.preventDefault();
+    setEmail(e.target.value);
+    // setIsButtonDisabled(!validateEmail(value) || isButtonClicked);
   };
 
   const validateEmail = (email) => {
@@ -23,10 +26,21 @@ const DeliveryDetails = ({ person }) => {
     return emailRegex.test(email);
   };
 
-  const handleEmailUpdate = () => {
-    setIsButtonClicked(true);
-    setMessage("Email updated successfully!");
-    setIsButtonDisabled(true);
+  const handleEmailUpdate = (e) => {
+    e.preventDefault();
+    setUpdateEmail(!updateEmail);
+    if (updateEmail) {
+      setMessage("Updating Email...")
+      emailRef.current.focus()
+    }
+    else {
+      if (validateEmail(email)) {
+        setMessage("Email updated successfully!")
+      } else {
+        setMessage("Pls enter a valid email address")
+        setUpdateEmail(false);
+      }
+    }
   };
 
   // setTimeout for message
@@ -66,7 +80,7 @@ const DeliveryDetails = ({ person }) => {
                       type="text"
                       placeholder="e.g Abdrahman Oladimeji"
                       required
-                      autofocus
+                      autoFocus
                       disabled
                     />
                   </div>
@@ -81,11 +95,11 @@ const DeliveryDetails = ({ person }) => {
                       className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                       id="name"
                       name="name"
-                      value={phoneNumber}
+                      value={phoneNumber ? phoneNumber : "+2349023600083"}
                       type="text"
                       placeholder="e.g 09023600083"
                       required
-                      autofocus
+                      autoFocus
                       disabled
                     />
                   </div>
@@ -100,20 +114,20 @@ const DeliveryDetails = ({ person }) => {
                       className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
                       id="email"
                       name="email"
-                      value={person.email}
+                      ref={emailRef}
+                      value={email ? email : person.email}
                       onChange={handleEmailChange}
                       type="email"
                       placeholder="example@gmail.com (click to edit & update)"
                       required
-                      autofocus
+                      disabled={updateEmail}
                     />
                     <div className="">
                       <button
                         className="border rounded p-1 mt-1 text-sm bg-[#ddd] text-[#308a69] transition duration-200 hover:scale-95 active:scale-100"
                         onClick={handleEmailUpdate}
-                        disabled={isButtonDisabled}
                       >
-                        Update Email
+                        {updateEmail ? "Update" : "Save"} Email
                       </button>
                       {message !== "" && (
                         <span className="text-primary ml-7">{message}</span>
@@ -135,7 +149,7 @@ const DeliveryDetails = ({ person }) => {
                       type="text"
                       placeholder="e.g No 13, Adeyemi close, Obafemi Awolowo Way, Opposite Elephant House, Alausa off abuja hih way"
                       required
-                      autofocus
+                      autoFocus
                       disabled
                     />
                   </div>
@@ -146,36 +160,37 @@ const DeliveryDetails = ({ person }) => {
                     >
                       Payment Method
                     </label>
-                    <input
-                      className="mb-3 w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
-                      id="name"
-                      name="name"
-                      value="Cash on Delivery"
-                      type="text"
-                      placeholder="e.g Abdrahman Oladimeji"
-                      required
-                      autofocus
-                      disabled
-                    />
-                    <input
-                      className="w-full rounded border border-[#012F1C] py-1 px-3 font-semibold text-primary outline-none"
-                      id="name"
-                      name="name"
-                      value="#2500"
-                      type="text"
-                      placeholder="e.g Abdrahman Oladimeji"
-                      required
-                      autofocus
-                      disabled
-                    />
+                    <div onClick={() => updatePaymentMethod("cash")} className="cursor-pointer flex justify-between mb-3 w-full rounded border border-[#012F1C] py-1 px-3">
+                      <div>
+                        Cash on delivery
+                      </div>
+                      <div className="flex items-center">
+                        <div className="flex items-center justify-center border h-5 w-5 border-primary rounded-full">
+                          <div className={`h-3.5 w-3.5 rounded-full`} style={paymentMethod === "cash" ? { backgroundColor: "#00834E" } : { backgroundColor: 'transparent' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div onClick={() => updatePaymentMethod("card")} className="flex justify-between mb-3 w-full rounded border border-[#012F1C] py-1 px-3">
+                      <div>
+                        Credit card or Debit card
+                      </div>
+                      <div className="flex items-center">
+                        <div className="flex items-center justify-center border h-5 w-5 border-primary rounded-full">
+                          <div className={`h-3.5 w-3.5 rounded-full`} style={paymentMethod === "card" ? { backgroundColor: "#00834E" } : { backgroundColor: 'transparent' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                    {paymentMethod === 'card' && <PaystackCheckout />}
                   </div>
-                  <div className="mt-10 mb-20 flex w-full">
-                    <Link to="/confirm" className="w-full">
-                      <button className="w-full rounded-lg bg-primary py-2 text-white transition duration-200 hover:scale-95 active:scale-100">
-                        Submit
-                      </button>
-                    </Link>
-                  </div>
+                  {paymentMethod === 'cash' &&
+                    <div className="mt-10 mb-20 flex w-full">
+                      <Link to="/confirm" className="w-full">
+                        <button type="submit" className="w-full rounded-lg bg-primary py-2 text-white transition duration-200 hover:scale-95 active:scale-100">
+                          Submit
+                        </button>
+                      </Link>
+                    </div>
+                  }
                 </div>
               </div>
             </div>

@@ -24,7 +24,7 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
     const num5Ref = useRef(null);
     const num6Ref = useRef(null);
 
-    const [timeLeft, setTimeLeft] = useState(35);
+    // const [timeLeft, setTimeLeft] = useState(35);
     window.onload= function(){
         num1Ref.current.focus()
     }
@@ -63,11 +63,19 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
             break;
         }
       };
+      useEffect(()=>{
+          const sumValue = num1 + num2 + num3 + num4 + num5 + num6;
+          setOTP(sumValue);
+      }, [num1, num2, num3, num4, num5, num6])
 
-    const handleSubmit = (e) => {
+      const handleSubmit = (e) => {
         e.preventDefault();
-        const sumValue = num1 + num2 + num3 + num4 + num5 + num6;
-        setOTP(sumValue);
+            num1Ref.current.value = '';
+            num2Ref.current.value = '';
+            num3Ref.current.value = '';
+            num4Ref.current.value = '';
+            num5Ref.current.value = '';
+            num6Ref.current.value = '';
         const confirmationResult = window.confirmationResult;
         confirmationResult.confirm(OTP).then((result) => {
             // User signed in successfully.
@@ -89,18 +97,18 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
         setVerifyModal(!verifyModal);
     }
 
-    useEffect(() => {
-        const timer = timeLeft > 0 && setInterval(() => setTimeLeft(timeLeft - 1), 1000);
-        return () => clearInterval(timer);
-    }, [timeLeft]);
+//     useEffect(() => {
+//         const timer = timeLeft > 0 && setInterval(() => setTimeLeft(timeLeft - 1), 1000);
+//         return () => clearInterval(timer);
+//     }, [timeLeft]);
 
-   const countDownTimer = timeLeft.toString().padStart(2, '0');
+//    const countDownTimer = timeLeft.toString().padStart(2, '0');
 
-    const handleRefresh = () => {
-        if(timeLeft === 0){
-            window.location.reload();
-        }
-      };
+//     const handleRefresh = () => {
+//         if(timeLeft === 0){
+//             window.location.reload();
+//         }
+//       };
 
     return (
         <div className='w-screen h-screen flex justify-center items-center bg-black/50 fixed top-0 left-0 z-50'>
@@ -175,10 +183,9 @@ const VerifyModal = ({ num, notify, warn, verifyModal, setVerifyModal }) => {
                             <div className="flex w-[90%]">
                                 <button onClick={handleSubmit} type='submit' className='text-white bg-primary cursor-pointer w-full py-3 rounded-lg text-xs hover:scale-95 active:scale-100 transition duration-200'>Verify & Proceed</button>
                             </div>
-                            <div className="text-[#80978E] text-xs mt-4 cursor-pointer">
+                            {/* <div className="text-[#80978E] text-xs mt-4 cursor-pointer">
                                 Did not receive OTP? <span onClick={handleRefresh} className="text-secondary font-bold">Resend (00: {countDownTimer})</span> 
-                            </div>
-                            <div id='sign-in-button'></div>
+                            </div> */}
                         </form>
                     </div>
                 </div>
