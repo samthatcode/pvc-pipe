@@ -8,3 +8,11 @@ export default defineConfig({
     react()
   ]
 })
+
+
+// ,
+//   build: {
+//     rollupOptions: {
+//       external: ['../react-paystack']
+//     }
+//   }
