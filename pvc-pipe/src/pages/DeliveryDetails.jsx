@@ -3,7 +3,7 @@ import { Layout } from "../components";
 import React, { useState, useEffect, useRef } from "react";
 import { usePhoneNumber } from "../contexts/NumberContext";
 import { usePaymentMethod } from "../contexts/PaymentContext";
-import PaystackCheckout from "../components/PaystackCheckout";
+// import PaystackCheckout from "../components/PaystackCheckout";
 // import { update } from "lodash";
 
 const DeliveryDetails = ({ person }) => {
@@ -180,7 +180,7 @@ const DeliveryDetails = ({ person }) => {
                         </div>
                       </div>
                     </div>
-                    {paymentMethod === 'card' && <PaystackCheckout />}
+                    {/* {paymentMethod === 'card' && <PaystackCheckout />} */}
                   </div>
                   {paymentMethod === 'cash' &&
                     <div className="mt-10 mb-20 flex w-full">
