@@ -5,6 +5,6 @@ export default {
       file: 'dist/bundle.js',
       format: 'cjs'
     },
-    external: ['paystack'] // Add the external module here
+    external: ['react-paystack'] // Add the external module here
   }
   
