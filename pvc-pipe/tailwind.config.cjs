@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     backgroundImage: {
-      'hero': "url(./assets/images/hero.png)",
+      'hero': "url(./assets/images/hero.jpg)",
       'about': "url(./assets/images/about.png)",
       'status': "url(./assets/images/header.png)",
       'status_mobile': "url(./assets/images/header_mobile.png)"
