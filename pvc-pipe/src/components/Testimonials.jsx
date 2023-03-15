@@ -1,32 +1,112 @@
-import React from "react";
+import React, { useState } from "react";
 import test1 from "./../assets/images/testimonial1.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import '../index.css'
 
 const Testimonials = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const NextArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <button
+        className="absolute top-1/2 right-0 -translate-y-1/2 transform rounded-full bg-primary p-2 text-white"
+        onClick={onClick}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    );
+  };
+
+  const PrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <button
+        className="absolute top-1/2 left-0 -translate-y-1/2 transform rounded-full bg-primary p-2 text-white"
+        onClick={onClick}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+    );
+  };
+
+  const Dot = ({ onClick, active }) => {
+    return (
+      <div
+        className={`mx-2 h-3 w-3 cursor-pointer rounded-full bg-gray-700 ${
+          active && "bg-primary"
+        }`}
+        onClick={onClick}
+      ></div>
+    );
+  };
+
   const settings = {
+    dots: true,
+    beforeChange: (current, next) => setCurrentSlide(next),
     arrows: true,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     infinite: true,
     cssEase: "ease-in-out",
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    dots: true,
-    appendDots: (dots) => (
-      <div className="text-2xl font-semibold ">
-        <ul style={{ margin: "0px", fontSize: "35px" }}> {dots} </ul>
-      </div>
-    ),
+    // appendDots: (dots) => {
+    //   return (
+    //     <div className="mt-4 !flex !justify-center">
+    //       {dots.map((_, index) => {
+    //         return (
+    //           <Dot
+    //             key={index}
+    //             active={index === currentSlide}
+    //             onClick={() => setCurrentSlide(index)}
+                
+    //           />
+    //         );
+    //       })}
+    //     </div>
+    //   );
+      
+    // },
+
 
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           infinite: true,
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: true,
         },
@@ -102,9 +182,10 @@ const Testimonials = () => {
       <div className="custom-underline mx-1 mt-4 mb-20 text-center text-3xl font-semibold md:text-4xl">
         Our <span className="text-primary">Testimonials</span>
       </div>
-      <div className=" mx-auto ">
+      <div className="container mx-auto ">
         <Slider
           {...settings}
+          afterChange={(index) => setCurrentSlide(index)}
           dots={true}
           autoplay={true}
           autoplaySpeed={2000}
@@ -116,7 +197,7 @@ const Testimonials = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.content}
-                  className="mx-auto mb-4 "
+                  className="mx-auto  "
                 />
                 <div className=" text-lg font-medium">
                   {testimonial.content}
@@ -124,7 +205,7 @@ const Testimonials = () => {
                 <div className="text-[1.25rem] font-medium">
                   {testimonial.name}
                 </div>
-                <div className="mb- text-lg font-[400]">
+                <div className="mb-10 text-lg font-[400]">
                   {testimonial.state}
                 </div>
               </div>
