@@ -157,7 +157,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                     <div className="text-sm font-semibold text-primary">#2500</div>
                   </div>)
                   : <div>
-                    Payment confirmed
+                    Payment is under processing
                   </div>
                 }
               </div>}

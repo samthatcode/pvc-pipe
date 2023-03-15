@@ -5,7 +5,7 @@ import { PaystackConsumer } from 'react-paystack';
 const PaystackCheckout = () => {
     const navigateTo = useNavigate();
     const [paymentEmail, setPaymentEmail] = useState('');
-    // const [amount, setAmount] = useState(2500);
+    
     const config = {
         reference: (new Date()).getTime().toString(),
         email: paymentEmail,
@@ -16,7 +16,7 @@ const PaystackCheckout = () => {
     const handlePaystackSuccessAction = (reference) => {
         // Implementation for whatever you want to do with reference and after success call.
         if(reference.status === "success"){
-            navigateTo("/confirm")
+          navigateTo("/confirm")
         }
       };
   
