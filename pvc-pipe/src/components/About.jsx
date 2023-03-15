@@ -1,27 +1,34 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
-    return (
-        <div className='grid grid-cols-12 min-h-[80vh]'>
-            <div className='col-span-12 md:col-span-5 bg-about h-[30rem] md:h-auto bg-cover order-2 md:order-1'></div>
-            <div id='about' className='col-span-12 md:col-span-7 pt-10 bg-darkGrey text-white pb-14 order-1 md:order-2'>
-                <div className='text-3xl font-semibold text-center my-14 custom-underline'>
-                    About <span className='text-primary'>us</span>
-                </div>
-                <div className='flex justify-center items-center mb-14 w-[90%] md:w-full mx-auto'>
-                    <div className='text-lg w-[90%] text-center max-w-[53ch]'>
-                        At PVC pipe, we are dedicated to ensuring that every 
-                        eligible voter receives their voter's card in a timely 
-                        and efficient manner. Our team is dedicated to making 
-                        the voting process as smooth as possible for all citizens.
-                    </div>
-                </div>
-                <div className='flex justify-center'>
-                    <button className='bg-primary py-4 px-14 hover:scale-90 transition duration-200 rounded-md font-semibold text-lg'>Learn more</button>
-                </div>
-            </div>
+  return (
+    <div className="grid min-h-[80vh] grid-cols-12">
+      <div className="order-2 col-span-12 h-[30rem] bg-about bg-cover md:order-1 md:col-span-5 md:h-auto"></div>
+      <div
+        id="about"
+        className="order-1 col-span-12 bg-darkGrey pt-10 pb-14 text-white md:order-2 md:col-span-7"
+      >
+        <div className="custom-underline my-14 text-center text-3xl font-semibold">
+          Provide information about{" "}
+          <span className="text-primary">our organisation</span>
         </div>
-    )
-}
+        <div className="mx-auto mb-14 flex w-[90%] items-center justify-center md:w-full">
+          <div className="w-[90%] max-w-[53ch] text-center text-lg">
+            At PVC pipe, we are committed to ensuring timely and efficient
+            delivery of voter's card to every eligible voter, and our team
+            strives to make the voting process smooth for all citizens. team is
+            dedicated to making the voting process as smooth as possible for all
+            citizens.
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <button className="rounded-md bg-primary py-4 px-14 text-lg font-semibold transition duration-200 hover:scale-90">
+            Learn more
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default About
+export default About;

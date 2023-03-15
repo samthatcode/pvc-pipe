@@ -10,25 +10,25 @@ export const whyUsData = [
     icon: reliable,
     bg: '#008c6557',
     title: 'Reliable',
-    body: 'We invest in reliability through testing, quality control, and maintenance to ensures our customers are satisfied, making our smooth-running easy.'
+    body: "To ensure our customer's satisfaction, we invest in reliability by conducting testing, implementing quality control, and performing maintenance. "
   },
   {
     icon: approved,
     bg: '#007C7457',
-    title: 'Government Approved',
-    body: 'Our company has been approved by the government, demonstrating our commitment to providing high-quality services which at the same time meet industry standards.'
+    title: 'Approved by the Government ',
+    body: "Our company's approval by the government demonstrates our dedication to providing high-quality services that meet industry standards. "
   },
   {
     icon: fast,
     bg: '#009A4957',
-    title: 'Fast',
-    body: 'Our commitment to timely delivery guarantees your goods will arrive on time. Our state-of-the-art tracking system and dedicated team ensure seamless delivery.'
+    title: 'Quick',
+    body: 'We are committed to timely delivery, ensuring that your goods arrive on schedule. With our state-of-the-art tracking system and dedication team, we provide seamless delivery services.'
   },
   {
     icon: accountable,
     bg: '#99D7B6',
-    title: 'Accountable',
-    body: 'We are accountable for any form of mismanagement that comes with the delivery of your product. We will ensure you package is delivered safely.'
+    title: 'Responsible',
+    body: 'We take responsibility for any mismanagement that may occur during the delivery of your product and guarantee safe delivery of your package.'
   }
 ]
 
