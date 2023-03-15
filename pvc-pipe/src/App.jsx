@@ -9,6 +9,7 @@ import { PhoneNumberProvider } from "./contexts/NumberContext";
 import { PaymentMethodProvider } from "./contexts/PaymentContext";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   const [personDetailsInput, setpersonDetailsInput] = useState({});
@@ -91,6 +92,7 @@ function App() {
               element={<ConfirmSubmitRequest person={personDetailsInput} />}
             />
             <Route path="/status" element={<DeliveryStatus />} />
+            <Route path="/*" element={<NotFoundPage />} />
           </Routes>
           <ToastContainer />
         </div>

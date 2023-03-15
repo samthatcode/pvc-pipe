@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../components";
 import { toast } from 'react-toastify';
-// import PaystackCheckout from "../components/PaystackCheckout";
+import PaystackCheckout from "../components/PaystackCheckout";
 import { usePaymentMethod } from "../contexts/PaymentContext";
 import { usePhoneNumber } from "../contexts/NumberContext";
 
@@ -11,7 +11,6 @@ const ConfirmSubmitRequest = ({ person }) => {
   const { phoneNumber } = usePhoneNumber();
   const { paymentMethod, updatePaymentMethod } = usePaymentMethod();
   const [editing, setEditing] = useState(false);
-  
   const toastParams = {
     position: "top-right",
     autoClose: 2500,
@@ -28,10 +27,10 @@ const ConfirmSubmitRequest = ({ person }) => {
 
   const handleEdit = () => {
     setEditing(!editing)
-    if(editing){
+    if (editing) {
       notify("Payment details saved!")
-    }else {
-        inform("Editing payment details...")
+    } else {
+      inform("Editing payment details...")
     }
   }
   const handleEditShipping = () => {
@@ -42,7 +41,7 @@ const ConfirmSubmitRequest = ({ person }) => {
     warn("Sorry, operation not allowed here");
     inform("Visit INEC site to edit your details");
   }
-  
+
   return (
     <Layout>
       <div>
@@ -65,7 +64,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                 <div className="font-poppins text-xl font-bold">
                   Shipping Address
                 </div>
-                <div onClick={handleEditShipping} className="text-sm text-secondary">Edit</div>
+                <div onClick={handleEditShipping} className="cursor-pointer text-sm text-secondary">Edit</div>
               </div>
               <div className="">
                 <div className="text-sm text-[#01301D80]">{person.address}</div>
@@ -77,7 +76,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                 <div className="font-poppins text-xl font-bold">
                   PVC Requested
                 </div>
-                <div onClick={handleEditDetails} className="text-sm text-secondary">Edit</div>
+                <div onClick={handleEditDetails} className="cursor-pointer text-sm text-secondary">Edit</div>
               </div>
               <div className="">
                 <div className="text-sm  text-[#01301D80]">
@@ -108,7 +107,7 @@ const ConfirmSubmitRequest = ({ person }) => {
                   <div className="flex gap-0">
                     <div className="">Phone no:</div>
                     <div className="text-l ml-3 font-poppins font-bold text-primary">
-                      {phoneNumber? phoneNumber : "+2349023600083"}
+                      {phoneNumber ? phoneNumber : "+2349023600083"}
                     </div>
                   </div>
                 </div>
@@ -119,67 +118,59 @@ const ConfirmSubmitRequest = ({ person }) => {
                 <div className="font-poppins text-xl font-bold">
                   Payment Method
                 </div>
-                <div onClick={handleEdit} className="text-sm text-secondary">{editing? "Save":"Edit"}</div>
+                <div onClick={handleEdit} className="cursor-pointer text-sm text-secondary">{editing ? "Save" : "Edit"}</div>
               </div>
               {editing && (<div className="mb-4 flex flex-col">
-                    <label
-                      htmlFor="name"
-                      className="mb-2 text-lg text-[#80978E]"
-                    >
-                     Edit Payment Method
-                    </label>
-                    <div onClick={() => updatePaymentMethod("cash")} className="cursor-pointer flex justify-between mb-3 w-full rounded border border-[#012F1C] py-1 px-3">
-                      <div>
-                        Cash on delivery
-                      </div>
-                      <div className="flex items-center">
-                        <div className="flex items-center justify-center border h-5 w-5 border-primary rounded-full">
-                          <div className={`h-3.5 w-3.5 rounded-full`} style={paymentMethod === "cash" ? { backgroundColor: "#00834E" } : { backgroundColor: 'transparent' }}></div>
-                        </div>
-                      </div>
+                <label
+                  htmlFor="name"
+                  className="mb-2 text-lg text-[#80978E]"
+                >
+                  Edit Payment Method
+                </label>
+                <div onClick={() => updatePaymentMethod("cash")} className="cursor-pointer flex justify-between mb-3 w-full rounded border border-[#012F1C] py-1 px-3">
+                  <div>
+                    Cash on delivery
+                  </div>
+                  <div className="flex items-center">
+                    <div className="flex items-center justify-center border h-5 w-5 border-primary rounded-full">
+                      <div className={`h-3.5 w-3.5 rounded-full`} style={paymentMethod === "cash" ? { backgroundColor: "#00834E" } : { backgroundColor: 'transparent' }}></div>
                     </div>
-                    <div onClick={() => updatePaymentMethod("card")} className="flex justify-between mb-3 w-full rounded border border-[#012F1C] py-1 px-3">
-                      <div>
-                        Credit card or Debit card
-                      </div>
-                      <div className="flex items-center">
-                        <div className="flex items-center justify-center border h-5 w-5 border-primary rounded-full">
-                          <div className={`h-3.5 w-3.5 rounded-full`} style={paymentMethod === "card" ? { backgroundColor: "#00834E" } : { backgroundColor: 'transparent' }}></div>
-                        </div>
-                      </div>
+                  </div>
+                </div>
+                <div onClick={() => updatePaymentMethod("card")} className="flex justify-between mb-3 w-full rounded border border-[#012F1C] py-1 px-3">
+                  <div>
+                    Credit card or Debit card
+                  </div>
+                  <div className="flex items-center">
+                    <div className="flex items-center justify-center border h-5 w-5 border-primary rounded-full">
+                      <div className={`h-3.5 w-3.5 rounded-full`} style={paymentMethod === "card" ? { backgroundColor: "#00834E" } : { backgroundColor: 'transparent' }}></div>
                     </div>
-                    {/* {paymentMethod === 'card' && <PaystackCheckout />} */}
-                  </div>)} 
+                  </div>
+                </div>
+                {paymentMethod === 'card' && <PaystackCheckout />}
+              </div>)}
 
-                  {!editing && <div>
-              { paymentMethod === "cash"
-              ?(<div className="flex gap-20 md:gap-40">
-                <div className="text-sm text-[#01301D80]">Cash on delivery</div>
-                <div className="text-sm font-semibold text-primary">#2500</div>
-              </div>)
-              :<div>
-                  Payment confirmed
-              </div>
-              }
-                  </div>}
+              {!editing && <div>
+                {paymentMethod === "cash"
+                  ? (<div className="flex gap-20 md:gap-40">
+                    <div className="text-sm text-[#01301D80]">Cash on delivery</div>
+                    <div className="text-sm font-semibold text-primary">#2500</div>
+                  </div>)
+                  : <div>
+                    Payment confirmed
+                  </div>
+                }
+              </div>}
             </div>
-            <div className="mt-5">
-              <Link to="/status">
-                <button className="w-full max-w-[800px] rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-full">
-                  Confirm & Submit
-                </button>
-              </Link>
-            </div>
-            
-            {/* {paymentMethod === "cash" &&
               <div className="mt-5">
                 <Link to="/status">
                   <button className="w-full max-w-[800px] rounded border bg-primary p-3 text-center text-white transition duration-200 hover:scale-95 lg:w-full">
-                    Confirm & Submit
+                  {paymentMethod === "cash" ?
+                    "Confirm & Submit" : "Track PVC"
+                  }
                   </button>
                 </Link>
               </div>
-            } */}
           </div>
         </div>
       </div>
