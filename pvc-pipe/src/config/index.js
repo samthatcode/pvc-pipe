@@ -15,7 +15,7 @@ const firebaseConfig = {
   storageBucket: "abdrahman-oladimeji.appspot.com",
   messagingSenderId: "866130121015",
   appId: "1:866130121015:web:b30ee2c3ea597db9184ab2",
-  measurementId: "G-NG5MS2YL0K"
+  measurementId: "G-NG5MS2YL0K",
 };
 
 // Initialize Firebase

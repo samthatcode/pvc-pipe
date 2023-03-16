@@ -3,7 +3,7 @@ import test1 from "./../assets/images/testimonial1.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../index.css'
+import "../index.css";
 
 const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -91,15 +91,14 @@ const Testimonials = () => {
     //             key={index}
     //             active={index === currentSlide}
     //             onClick={() => setCurrentSlide(index)}
-                
+
     //           />
     //         );
     //       })}
     //     </div>
     //   );
-      
-    // },
 
+    // },
 
     responsive: [
       {

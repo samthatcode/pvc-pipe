@@ -171,7 +171,12 @@ const DeliveryInProgress = ({ person }) => {
                 </button>
               </Link>
               <Link to="/status">
-                <p className="text-sm mt-3 text-center md:text-left font-poppins text-[#80978E]">Already requested? <span className="text-secondary font-bold hover:underline">Click to track delivery progress</span></p>
+                <p className="mt-3 text-center font-poppins text-sm text-[#80978E] md:text-left">
+                  Already requested?{" "}
+                  <span className="font-bold text-secondary hover:underline">
+                    Click to track delivery progress
+                  </span>
+                </p>
               </Link>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 
 // Create a new context object
 const PaymentContext = React.createContext();
@@ -10,7 +10,7 @@ export function usePaymentMethod() {
 
 // Create a provider component to wrap around the app
 export function PaymentMethodProvider({ children }) {
-  const [paymentMethod, setPaymentMethod] = useState('cash');
+  const [paymentMethod, setPaymentMethod] = useState("cash");
 
   const updatePaymentMethod = (value) => {
     setPaymentMethod(value);
