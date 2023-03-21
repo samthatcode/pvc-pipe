@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 
 // Create a new context object
 const PhoneNumberContext = React.createContext();
@@ -10,7 +10,7 @@ export function usePhoneNumber() {
 
 // Create a provider component to wrap around the app
 export function PhoneNumberProvider({ children }) {
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const updatePhoneNumber = (value) => {
     setPhoneNumber(value);

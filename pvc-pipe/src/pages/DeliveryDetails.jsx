@@ -12,7 +12,7 @@ const DeliveryDetails = ({ person }) => {
   const { paymentMethod, updatePaymentMethod } = usePaymentMethod();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [updateEmail, setUpdateEmail] = useState(false);  // update email feild
+  const [updateEmail, setUpdateEmail] = useState(false); // update email feild
 
   const handleEmailChange = (e) => {
     e.preventDefault();
@@ -30,14 +30,13 @@ const DeliveryDetails = ({ person }) => {
     e.preventDefault();
     setUpdateEmail(!updateEmail);
     if (updateEmail) {
-      setMessage("Updating Email...")
-      emailRef.current.focus()
-    }
-    else {
+      setMessage("Updating Email...");
+      emailRef.current.focus();
+    } else {
       if (validateEmail(email)) {
-        setMessage("Email updated successfully!")
+        setMessage("Email updated successfully!");
       } else {
-        setMessage("Pls enter a valid email address")
+        setMessage("Pls enter a valid email address");
         setUpdateEmail(false);
       }
     }
@@ -124,13 +123,13 @@ const DeliveryDetails = ({ person }) => {
                     />
                     <div className="">
                       <button
-                        className="border rounded p-1 mt-1 text-sm bg-[#ddd] text-[#308a69] transition duration-200 hover:scale-95 active:scale-100"
+                        className="mt-1 rounded border bg-[#ddd] p-1 text-sm text-[#308a69] transition duration-200 hover:scale-95 active:scale-100"
                         onClick={handleEmailUpdate}
                       >
                         {updateEmail ? "Update" : "Save"} Email
                       </button>
                       {message !== "" && (
-                        <span className="text-primary ml-7">{message}</span>
+                        <span className="ml-7 text-primary">{message}</span>
                       )}
                     </div>
                   </div>
@@ -160,37 +159,56 @@ const DeliveryDetails = ({ person }) => {
                     >
                       Payment Method
                     </label>
-                    <div onClick={() => updatePaymentMethod("cash")} className="cursor-pointer flex justify-between mb-3 w-full rounded border border-[#012F1C] py-1 px-3">
-                      <div>
-                        Cash on delivery
-                      </div>
+                    <div
+                      onClick={() => updatePaymentMethod("cash")}
+                      className="mb-3 flex w-full cursor-pointer justify-between rounded border border-[#012F1C] py-1 px-3"
+                    >
+                      <div>Cash on delivery</div>
                       <div className="flex items-center">
-                        <div className="flex items-center justify-center border h-5 w-5 border-primary rounded-full">
-                          <div className={`h-3.5 w-3.5 rounded-full`} style={paymentMethod === "cash" ? { backgroundColor: "#00834E" } : { backgroundColor: 'transparent' }}></div>
+                        <div className="flex h-5 w-5 items-center justify-center rounded-full border border-primary">
+                          <div
+                            className={`h-3.5 w-3.5 rounded-full`}
+                            style={
+                              paymentMethod === "cash"
+                                ? { backgroundColor: "#00834E" }
+                                : { backgroundColor: "transparent" }
+                            }
+                          ></div>
                         </div>
                       </div>
                     </div>
-                    <div onClick={() => updatePaymentMethod("card")} className="flex justify-between mb-3 w-full rounded border border-[#012F1C] py-1 px-3">
-                      <div>
-                        Credit card or Debit card
-                      </div>
+                    <div
+                      onClick={() => updatePaymentMethod("card")}
+                      className="mb-3 flex w-full justify-between rounded border border-[#012F1C] py-1 px-3"
+                    >
+                      <div>Credit card or Debit card</div>
                       <div className="flex items-center">
-                        <div className="flex items-center justify-center border h-5 w-5 border-primary rounded-full">
-                          <div className={`h-3.5 w-3.5 rounded-full`} style={paymentMethod === "card" ? { backgroundColor: "#00834E" } : { backgroundColor: 'transparent' }}></div>
+                        <div className="flex h-5 w-5 items-center justify-center rounded-full border border-primary">
+                          <div
+                            className={`h-3.5 w-3.5 rounded-full`}
+                            style={
+                              paymentMethod === "card"
+                                ? { backgroundColor: "#00834E" }
+                                : { backgroundColor: "transparent" }
+                            }
+                          ></div>
                         </div>
                       </div>
                     </div>
-                    {paymentMethod === 'card' && <PaystackCheckout />}
+                    {paymentMethod === "card" && <PaystackCheckout />}
                   </div>
-                  {paymentMethod === 'cash' &&
+                  {paymentMethod === "cash" && (
                     <div className="mt-10 mb-20 flex w-full">
                       <Link to="/confirm" className="w-full">
-                        <button type="submit" className="w-full rounded-lg bg-primary py-2 text-white transition duration-200 hover:scale-95 active:scale-100">
+                        <button
+                          type="submit"
+                          className="w-full rounded-lg bg-primary py-2 text-white transition duration-200 hover:scale-95 active:scale-100"
+                        >
                           Submit
                         </button>
                       </Link>
                     </div>
-                  }
+                  )}
                 </div>
               </div>
             </div>

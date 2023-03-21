@@ -27,35 +27,35 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="my-auto hidden w-full max-w-[600px] items-center justify-between font-poppins text-white md:flex">
           <HashLink
-            to={pathname === '/' ? `#home`: '/#home'}
+            to={pathname === "/" ? `#home` : "/#home"}
             smooth
             className="px-4 decoration-2 underline-offset-4 hover:underline"
           >
             Home
           </HashLink>
           <HashLink
-            to={pathname === '/' ? `#services`: '/#services'}
+            to={pathname === "/" ? `#services` : "/#services"}
             smooth
             className="px-4 decoration-2 underline-offset-4 hover:underline"
           >
             Services
           </HashLink>
           <HashLink
-            to={pathname === '/' ? `#about`: '/#about'}
+            to={pathname === "/" ? `#about` : "/#about"}
             smooth
             className="px-4 decoration-2 underline-offset-4 hover:underline"
           >
             About us
           </HashLink>
           <HashLink
-            to={pathname === '/' ? `#testimonials`: '/#testimonials'}
+            to={pathname === "/" ? `#testimonials` : "/#testimonials"}
             smooth
             className="px-4 decoration-2 underline-offset-4 hover:underline"
           >
             Testimonials
           </HashLink>
           <HashLink
-            to={pathname === '/' ? `#contact`: '/#contact'}
+            to={pathname === "/" ? `#contact` : "/#contact"}
             smooth
             className="px-4 decoration-2 underline-offset-4 hover:underline"
           >
@@ -80,7 +80,7 @@ const Navbar = () => {
               onClick={showMenu}
             >
               <HashLink
-                to={pathname === '/' ? `#home`: '/#home'}
+                to={pathname === "/" ? `#home` : "/#home"}
                 smooth
                 className="px-4 decoration-2 underline-offset-4 hover:underline"
               >
@@ -89,7 +89,7 @@ const Navbar = () => {
             </div>
             <div className="my-4 flex justify-center" onClick={showMenu}>
               <HashLink
-                to={pathname === '/' ? `#services`: '/#services'}
+                to={pathname === "/" ? `#services` : "/#services"}
                 smooth
                 className="px-4 decoration-2 underline-offset-4 hover:underline"
               >
@@ -98,7 +98,7 @@ const Navbar = () => {
             </div>
             <div className="my-4 flex justify-center" onClick={showMenu}>
               <HashLink
-                to={pathname === '/' ? `#about`: '/#about'}
+                to={pathname === "/" ? `#about` : "/#about"}
                 smooth
                 className="px-4 decoration-2 underline-offset-4 hover:underline"
               >
@@ -107,7 +107,7 @@ const Navbar = () => {
             </div>
             <div className="my-4 flex justify-center" onClick={showMenu}>
               <HashLink
-                to={pathname === '/' ? `#testimonials`: '/#testimonials'}
+                to={pathname === "/" ? `#testimonials` : "/#testimonials"}
                 smooth
                 className="px-4 decoration-2 underline-offset-4 hover:underline"
               >
@@ -116,7 +116,7 @@ const Navbar = () => {
             </div>
             <div className="my-4 flex justify-center" onClick={showMenu}>
               <HashLink
-                to={pathname === '/' ? `#contact`: '/#contact'}
+                to={pathname === "/" ? `#contact` : "/#contact"}
                 smooth
                 className="px-4 decoration-2 underline-offset-4 hover:underline"
               >

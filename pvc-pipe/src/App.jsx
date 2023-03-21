@@ -7,8 +7,8 @@ import DeliveryStatus from "./pages/DeliveryStatus";
 import axios from "axios";
 import { PhoneNumberProvider } from "./contexts/NumberContext";
 import { PaymentMethodProvider } from "./contexts/PaymentContext";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -23,7 +23,9 @@ function App() {
         setpersonDetailsInput({
           firstName: data.name.first || "Davut",
           lastName: data.name.last || "Dağlaroğlu",
-          photo: data.picture.large || "https://randomuser.me/api/portraits/med/men/43.jpg",
+          photo:
+            data.picture.large ||
+            "https://randomuser.me/api/portraits/med/men/43.jpg",
           sex: data.gender || "male",
           phoneNumber: data.phone || "+2349023600083",
           email: data.email || "davutdaglarouglu@gmail.com",
@@ -36,8 +38,12 @@ function App() {
           state: data.location.state || "Lagos",
           lga: data.location.city || "Kosofe",
           code: generateRandomNumber(),
-          address: `${data.location.street.name}, ${data.location.street.number}` || "4819 Tunalı Hilmi Cd",
-          pickupLocation: `${data.location.street.name}, ${data.location.street.number}` || "PVC-Pipe Logistics Office",
+          address:
+            `${data.location.street.name}, ${data.location.street.number}` ||
+            "4819 Tunalı Hilmi Cd",
+          pickupLocation:
+            `${data.location.street.name}, ${data.location.street.number}` ||
+            "PVC-Pipe Logistics Office",
         });
       })
       .catch((error) => console.log(error));
@@ -102,4 +108,3 @@ function App() {
 }
 
 export default App;
-
