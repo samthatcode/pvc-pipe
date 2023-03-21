@@ -88,23 +88,6 @@ const Testimonials = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // appendDots: (dots) => {
-    //   return (
-    //     <div className="mt-4 !flex !justify-center">
-    //       {dots.map((_, index) => {
-    //         return (
-    //           <Dot
-    //             key={index}
-    //             active={index === currentSlide}
-    //             onClick={() => setCurrentSlide(index)}
-
-    //           />
-    //         );
-    //       })}
-    //     </div>
-    //   );
-
-    // },
 
     responsive: [
       {
@@ -160,7 +143,7 @@ const Testimonials = () => {
       image: test2,
       content:
         "I've used a lot of delivery services before, but this one was by far the best. The communication was clear and consistent, the delivery was prompt and efficient, and my card arrived in perfect condition. I highly recommend this delivery service to anyone who wants top-notch service!",
-      name: "Bukola and Firends",
+      name: "Bukola and Friends",
       state: "Lokoja, Kogi State",
     },
     {

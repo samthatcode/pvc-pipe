@@ -34,16 +34,26 @@ export const whyUsData = [
 export const faqData = [
   {
     title: "How long does it take to get my PVC delivered?",
-    content: `You can get your PVC within 72 hours of requesting for delivery and getting your order confirmed`,
+    content: `You can get your PVC within 72 hours of placing the request, however may varies depending on your location`,
   },
   {
-    title: "How do i change my delivery address and phone number?",
-    content: `You can get your PVC within 72 hours of requesting for delivery and getting your order confirmed`,
+    title: "Can I change my delivery address and phone number?",
+    content: `Sorry, you can't for security reasons, but you can do that on your profile on INEC portal`,
   },
   {
     title:
-      "What happens if i am not at home when the delivery man comes around?",
-    content: `You can get your PVC within 72 hours of requesting for delivery and getting your order confirmed`,
+      "What can I do if I won't be around on the delivery day?",
+    content: `There's nothing we can do than you make yourself available on your card delivery day`,
+  },
+  {
+    title:
+      "Can someone else help me collect my PVC if I'm not around?",
+    content: `No, for security reasons, our delivery agent will deliver only your card to you`,
+  },
+  {
+    title:
+      "What will happen if I am not at home when the delivery agent comes around?",
+    content: `Your PVC will be returned back to to the pickup office until you request again`,
   },
 ];
 
