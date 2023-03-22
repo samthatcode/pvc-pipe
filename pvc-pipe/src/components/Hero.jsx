@@ -67,12 +67,8 @@ const Hero = () => {
   return (
     <div className="h-screen pb-8 pt-8" id="home">
       <div className="mt-8 flex h-full flex-col items-center justify-center bg-black/50 bg-hero bg-cover bg-top text-white">
-        <div className="mb-4 w-[90%] text-center text-2xl font-semibold md:mb-8 md:text-4xl">
-          {" "}
-          <span className="text-secondary">PVC Delivery </span>at the comfort of
-          your home
-
-
+        <div className="mb-4 w-[90%] text-center text-2xl font-semibold md:mb-8 md:text-4xl">  
+          <span className="text-secondary">Get Your PVC Delivered </span>Fast and Hassle-Free, Right to Your Doorstep
         </div>
         <div className="mb-4 w-[90%] max-w-[64ch] text-center text-base sm:mb-8 md:mb-16 md:text-lg">
           Experience timely and hassle-free delivery of top-quality PVC products to your doorstep with our trusted and customer-oriented PVC delivery company, providing efficient and reliable services to meet all your needs.
