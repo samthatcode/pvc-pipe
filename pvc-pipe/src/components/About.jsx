@@ -9,10 +9,11 @@ const About = () => {
         className="order-1 col-span-12 bg-darkGrey pt-10 pb-14 text-white md:order-2 md:col-span-7"
       >
         <div className="custom-underline my-14 text-center text-3xl font-semibold">
-          About <span className="text-primary">our organisation</span>
+          About{" "}
+          <span className="text-primary">us</span>
         </div>
         <div className="mx-auto mb-14 flex w-[90%] items-center justify-center md:w-full">
-          <div className="w-[90%] max-w-[53ch] text-center text-lg">
+          <div className="w-[90%] max-w-[53ch] text-justify text-lg">
             At PVC pipe, we are committed to ensuring timely and efficient
             delivery of voter's card to every eligible voter, and our team
             strives to make the voting process smooth for all citizens. team is

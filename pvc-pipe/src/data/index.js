@@ -53,7 +53,7 @@ export const faqData = [
   {
     title:
       "What will happen if I am not at home when the delivery agent comes around?",
-    content: `Your PVC will be returned back to to the pickup office until you request again`,
+    content: `Your PVC will be returned back to the pickup office until you request again`,
   },
 ];
 
