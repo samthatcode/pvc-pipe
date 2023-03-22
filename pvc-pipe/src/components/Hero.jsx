@@ -71,10 +71,11 @@ const Hero = () => {
           {" "}
           <span className="text-secondary">PVC Delivery </span>at the comfort of
           your home
+
+
         </div>
         <div className="mb-4 w-[90%] max-w-[64ch] text-center text-base sm:mb-8 md:mb-16 md:text-lg">
-          Making sure your pvc is delivered and given to you at the comfort of
-          your home, your voice must be heard.
+          Experience timely and hassle-free delivery of top-quality PVC products to your doorstep with our trusted and customer-oriented PVC delivery company, providing efficient and reliable services to meet all your needs.
         </div>
         <form
           onSubmit={handleSubmit}
