@@ -18,7 +18,7 @@ const Testimonials = () => {
     const { onClick } = props;
     return (
       <button
-        className="absolute top-1/2 right-0 -translate-y-1/2 transform rounded-full bg-primary p-2 text-white"
+        className="absolute top-1/2 right-0 mx-1 -translate-y-1/2 transform rounded-full bg-primary p-2 text-white"
         onClick={onClick}
       >
         <svg
@@ -43,7 +43,7 @@ const Testimonials = () => {
     const { onClick } = props;
     return (
       <button
-        className="absolute top-1/2 left-0 -translate-y-1/2 transform rounded-full bg-primary p-2 text-white"
+        className="absolute top-1/2 left-0 mx-1 -translate-y-1/2 transform rounded-full bg-primary p-2 text-white"
         onClick={onClick}
       >
         <svg
@@ -167,7 +167,7 @@ const Testimonials = () => {
       image: test5,
       content:
         "I have been using this delivery service for a while now and they have never let me down. Their customer service is fantastic, and their drivers are always on time and professional. I appreciate the care and attention they give to my PVC delivery, and I highly recommend them to anyone who needs a reliable and trustworthy service.  Thank you PVC PIPE...",
-      name: "Regina Daniels",
+      name: "Ebimo Daniels",
       state: "Ikoyi, Lagos State",
     },
     {
@@ -196,22 +196,20 @@ const Testimonials = () => {
           className=" center-padding"
         >
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="px-2 sm:px-5 md:px-4">
-              <div className="flex flex-col ">
+            <div key={testimonial.id} className="px-2 sm:px-5 md:px-4 ">
+              <div className="flex flex-col p-2">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="mx-auto rounded "
+                  className="mx-auto rounded-md pb-4 "
                 />
-                <div className=" text-lg font-medium">
+                <div className=" pb-1 text-justify text-base font-[300] ">
                   {testimonial.content}
                 </div>
-                <div className="text-[1.25rem] font-medium text-primary">
+                <div className="text-[1.2rem] font-[300] text-primary">
                   {testimonial.name}
                 </div>
-                <div className="mb-10 text-lg font-[400]">
-                  {testimonial.state}
-                </div>
+                <div className=" text-lg font-[400]">{testimonial.state}</div>
               </div>
             </div>
           ))}

@@ -11,7 +11,7 @@ const HowItWorks = () => {
         <span className="text-primary decoration-4">it works</span>
       </div>
 
-      <div className="mr-4 grid grid-cols-1 content-between justify-items-center gap-4 md:grid-cols-3">
+      <div className="mr-4 grid grid-cols-1 content-between justify-items-center  gap-4 md:grid-cols-3">
         <div className="grid place-items-center text-center ">
           <img
             src={find}
@@ -20,7 +20,7 @@ const HowItWorks = () => {
           <div className="my-4 text-xl font-semibold text-greyText md:text-2xl">
             Locate your PVC
           </div>
-          <div className="mb-4 text-lg md:text-xl">
+          <div className="mb-4  md:text-lg ">
             We priortize reliability by conducting tests, implementing quality
             control measures, and performing maintenance to ensure our
             customer's satisfaction.
@@ -34,7 +34,7 @@ const HowItWorks = () => {
           <div className="my-4 text-xl font-semibold text-greyText md:text-2xl">
             Make a Request
           </div>
-          <div className="mb-4 text-lg md:text-xl">
+          <div className="mb-4 md:text-lg">
             To ensure our customer's satisfaction, we invest in reliability by
             conducting testing, implementing quality control, and performing
             maintenance.
@@ -48,7 +48,7 @@ const HowItWorks = () => {
           <div className="my-4 text-xl font-semibold text-greyText md:text-2xl">
             Confirm the Delivery
           </div>
-          <div className="mb-4 text-lg md:text-xl">
+          <div className="mb-4 md:text-lg">
             To ensure our customer's satisfaction, we invest in reliability by
             conducting testing, implementing quality control, and performing
             maintenance.
