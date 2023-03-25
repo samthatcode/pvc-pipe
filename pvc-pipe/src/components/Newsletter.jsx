@@ -1,6 +1,21 @@
 import React from "react";
 
 const Newsletter = () => {
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  
+  //   const myForm = event.target;
+  //   const formData = new FormData(myForm);
+  
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formData).toString(),
+  //   })
+  //     .then(() => navigate("/thank-you/"))
+  //     .catch((error) => alert(error));
+  // };
+  
   return (
     <>
       <div
@@ -18,8 +33,22 @@ const Newsletter = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+      <div className="fixed top-0 right-0 h-screen w-full flex justify-center items-center bg-white/50">
+        <div className=" bg-primary rounded-md p-6 w-[90%] max-w-4xl">
+          <h2 className="text-2xl text-secondary font-bold mb-4">Subscribe to our newsletter</h2>
+          <form className="flex flex-col" action="/success" name="newsletter" method="POST" data-netlify="true" netlify>
+              <input type="hidden" name="form-name" value="newsletter" />
+              <label className="text-secondary mb-2 font-semibold" for="email">Name:</label>
+              <input className="rounded-md border-2 border-secondary py-2 px-3 mb-4" type="text" name="name" id="name" required placeholder="Enter your name" />
+              <label className="text-secondary mb-2 font-semibold" for="email">Email Address:</label>
+              <input className="rounded-md border-2 border-secondary py-2 px-3 mb-4" type="email" name="email" id="email" required placeholder="Enter your email address" />
+              <button className="bg-secondary text-white font-semibold py-2 rounded-md hover:bg-opacity-80 transition-colors duration-300" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+        </>
+        );
 };
 
-export default Newsletter;
+        export default Newsletter;

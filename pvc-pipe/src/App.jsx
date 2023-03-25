@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
-import "./App.css";
-import { Home, DeliveryInProgress, ConfirmSubmitRequest } from "./pages";
 import { Route, Routes } from "react-router-dom";
-import DeliveryDetails from "./pages/DeliveryDetails";
-import DeliveryStatus from "./pages/DeliveryStatus";
+import "./App.css";
 import axios from "axios";
+import { ToastContainer } from "react-toastify";
 import { PhoneNumberProvider } from "./contexts/NumberContext";
 import { PaymentMethodProvider } from "./contexts/PaymentContext";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Home, DeliveryInProgress, ConfirmSubmitRequest } from "./pages";
+import DeliveryDetails from "./pages/DeliveryDetails";
+import DeliveryStatus from "./pages/DeliveryStatus";
+import Success from "./pages/Success";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -98,6 +99,7 @@ function App() {
               element={<ConfirmSubmitRequest person={personDetailsInput} />}
             />
             <Route path="/status" element={<DeliveryStatus />} />
+            <Route path="/success" element={<Success />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
           <ToastContainer />

@@ -1,9 +1,10 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 const About = () => {
   return (
     <div className="grid min-h-[80vh] grid-cols-12">
-      <div className="order-2 col-span-12 h-[30rem] bg-about bg-cover bg-center md:order-1 md:col-span-5 md:h-auto"></div>
+      <div className="order-2 col-span-12 h-[30rem] bg-about bg-cover bg-secondary bg-bottom md:order-1 md:col-span-5 md:h-auto"></div>
       <div
         id="about"
         className="order-1 col-span-12 bg-darkGrey pt-10 pb-14 text-white md:order-2 md:col-span-7"
@@ -22,9 +23,11 @@ const About = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <button className="rounded-md bg-primary py-4 px-14 text-lg font-semibold transition duration-200 hover:scale-90">
-            Learn more
-          </button>
+          <HashLink to="#testimonials" smooth='true'>
+            <button className="rounded-md bg-primary py-4 px-14 text-lg font-semibold transition duration-200 hover:scale-90">
+              Learn more
+            </button>
+          </HashLink>
         </div>
       </div>
     </div>

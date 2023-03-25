@@ -19,8 +19,9 @@ const Navbar = () => {
       >
         {/* Brand Logo */}
         <div className="my-auto flex font-semibold">
-          <Link to="/" className={``}>
-            PVC Pipe
+          <Link to="/" className={`flex justify-center items-center`}>
+            <img className="w-10 mr-2" src="https://res.cloudinary.com/dh4rm7b7b/image/upload/c_scale,r_11,w_100/v1679739220/PVC-Pipe/PVC_Pipe-06_ediimz.png" alt="PVC-Pipe" />
+            <div className="font-bold">PVC Pipe</div>
           </Link>
         </div>
 
