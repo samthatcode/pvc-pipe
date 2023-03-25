@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     backgroundImage: {
       'hero': "url(./assets/images/hero.jpg)",
-      'about': "url(./assets/images/about.jpg)",
+      'about': "url(https://res.cloudinary.com/dh4rm7b7b/image/upload/v1679732119/PVC-Pipe/PVC_Pipe-13-1_sejpxp.png)",
       'status': "url(./assets/images/header.png)",
       'status_mobile': "url(./assets/images/header_mobile.png)"
     },

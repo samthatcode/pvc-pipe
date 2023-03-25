@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import VerifyModal from "./VerifyModal";
 import { usePhoneNumber } from "../contexts/NumberContext";
+import { HashLink } from "react-router-hash-link";
 
 const Hero = () => {
   const inputRef = useRef(null);
@@ -112,9 +113,11 @@ const Hero = () => {
               </div>
             </div>
             <div className="mt-4 flex justify-center md:mt-0">
+              <HashLink to="#about" smooth='true'>
               <button className="ml-0 w-full rounded border border-white py-1 px-10 text-white transition duration-200  hover:scale-90 md:ml-5 md:w-fit lg:px-20">
                 View
               </button>
+              </HashLink>
             </div>
           </div>
         </div>
