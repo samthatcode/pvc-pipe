@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="mb-4 flex w-full justify-start text-left text-2xl font-medium">
               <div>PVC PIPE</div>
             </div>
-            <div className="max-w-[32ch] text-justify md:text-left">
+            <div className="max-w-[32ch]  md:text-left">
               We are a team of dedicated individuals who understand the
               importance of having a valid voters card. That's why we have made
               it our mission to ensure that everyone has access to their voters
