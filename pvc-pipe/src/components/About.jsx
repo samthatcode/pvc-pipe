@@ -14,7 +14,7 @@ const About = () => {
           <span className="text-primary">us</span>
         </div>
         <div className="mx-auto mb-14 flex w-[90%] items-center justify-center md:w-full">
-          <div className="w-[90%] max-w-[53ch] text-justify text-lg">
+          <div className="w-[90%] max-w-[53ch] text-center text-sm">
             At PVC pipe, we are committed to ensuring timely and efficient
             delivery of voter's card to every eligible voter, and our team
             strives to make the voting process smooth for all citizens. team is
