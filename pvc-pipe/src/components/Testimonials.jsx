@@ -134,7 +134,7 @@ const Testimonials = () => {
       id: 1,
       image: test1,
       content:
-        " I ordered my mum’s PVC and mine and within 48 hours it got to us so glad i did not have to wait in that long queue at ikeja, They made life easy and i have already recommended them to my family and friends. They give the best and are excellent in their work. Great job and kudos to the PVC PIPE team..",
+        " I ordered my mum’s PVC and mine and within 48 hours it got to us so glad i did not have to wait in that long queue at ikeja, They made life easy and i have already recommended them to my family and friends. Great job and kudos to the PVC PIPE team.",
       name: "Loretta Igwe",
       state: "Jakande, Lagos State",
     },
@@ -142,31 +142,31 @@ const Testimonials = () => {
       id: 2,
       image: test2,
       content:
-        "I've used a lot of delivery services before, but this one was by far the best. The communication was clear and consistent, the delivery was prompt and efficient, and my card arrived in perfect condition. I highly recommend this delivery service to anyone who wants top-notch service!",
+        "I've used a lot of delivery services before, but this one was by far the best. The communication was clear and consistent, the delivery was prompt and efficient, and my card arrived in perfect condition.",
       name: "Bukola and Friends",
-      state: "Lokoja, Kogi State",
+      state: "Ikorodu, Lagos State",
     },
     {
       id: 3,
       image: test3,
       content:
-        "I am extremely impressed with the level of service provided by their delivery service. The delivery team were friendly and professional, and my card was delivered quickly and with great care. I will definitely be using this service again and recommending it to my friends and family. Thank you PVC PIPE...",
+        "I am extremely impressed with the level of service provided by their delivery service. The delivery team were friendly and professional, and my card was delivered quickly and with great care. PROVIDED BY PVC PIPE.",
       name: "Binta Williams",
-      state: "Garki, Abuja",
+      state: "Surulere, Lagos State",
     },
     {
       id: 4,
       image: test4,
       content:
-        "I had a last-minute delivery that needed to be made and this service came through for me in a big way. They were able to pick up and deliver my PVC within hours, and it arrived in excellent condition. I am so grateful for their top-notch service and will be using them again in the future. You guys are the bomb!!!",
+        "I had a last-minute delivery that needed to be made and this service came through for me in a big way. They were able to pick up and deliver my PVC within hours, and it arrived in excellent condition. You guys are the bomb!!!",
       name: "Adamu Garba and Family",
-      state: "Kaduna State",
+      state: "Ajah, Lagos State",
     },
     {
       id: 4,
       image: test5,
       content:
-        "I have been using this delivery service for a while now and they have never let me down. Their customer service is fantastic, and their drivers are always on time and professional. I appreciate the care and attention they give to my PVC delivery, and I highly recommend them to anyone who needs a reliable and trustworthy service.  Thank you PVC PIPE...",
+        "I was able to locate my PVC on time because PVC PIPE made it easy.",
       name: "Ebimo Daniels",
       state: "Ikoyi, Lagos State",
     },
@@ -174,9 +174,9 @@ const Testimonials = () => {
       id: 4,
       image: test6,
       content:
-        "I was hesitant to use a delivery service but to my greatest surprise, but their service exceeded my expectations. They kept me updated throughout the entire delivery process and my card arrived on time and in perfect condition. I was blown away by their level of service and professionalism. I will definitely be using them again in the future.",
+        "I was hesitant to use a delivery service but to my greatest surprise, but their service exceeded my expectations. They kept me updated throughout the entire delivery process and my card arrived on time and in perfect condition. I will definitely be using them again in the future.",
       name: "Tade Ogidan and Colleague",
-      state: "Ibadan, Oyo State",
+      state: "Ikeja, Lagos State",
     },
     // add more testimonial objects as needed
   ];
@@ -203,13 +203,13 @@ const Testimonials = () => {
                   alt={testimonial.name}
                   className="mx-auto rounded-md pb-4 "
                 />
-                <div className=" pb-1 text-justify text-base font-[300] ">
+                <div className=" pb-1 text-justify text-[12px] font-[300] ">
                   {testimonial.content}
                 </div>
-                <div className="text-[1.2rem] font-[300] text-primary">
+                <div className="text-[14px] font-[300] text-primary">
                   {testimonial.name}
                 </div>
-                <div className=" text-lg font-[400]">{testimonial.state}</div>
+                <div className=" text-[16px] font-[400]">{testimonial.state}</div>
               </div>
             </div>
           ))}

@@ -21,7 +21,7 @@ export const whyUsData = [
     icon: fast,
     bg: "#009A4957",
     title: "Quick",
-    body: "We are committed to timely delivery, ensuring that your goods arrive on schedule. With our state-of-the-art tracking system and dedication team, we provide seamless delivery services.",
+    body: "We are committed to timely delivery, ensuring that your goods arrive on schedule. With our state-of-the-art tracking system and dedicated team, we provide seamless delivery services.",
   },
   {
     icon: accountable,
