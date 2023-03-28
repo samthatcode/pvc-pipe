@@ -72,7 +72,7 @@ const Hero = () => {
           <span className="text-secondary">Get Your PVC Delivered </span>Fast and Hassle-Free, Right to Your Doorstep
         </div>
         <div className="mb-4 w-[90%] max-w-[64ch] text-center text-base sm:mb-8 md:mb-16 md:text-lg">
-          Experience timely and hassle-free delivery of top-quality PVC products to your doorstep with our trusted and customer-oriented PVC delivery company, providing efficient and reliable services to meet all your needs.
+          Experience timely delivery with our trusted and customer-oriented PVC delivery company, providing efficient and reliable services.
         </div>
         <form
           onSubmit={handleSubmit}
