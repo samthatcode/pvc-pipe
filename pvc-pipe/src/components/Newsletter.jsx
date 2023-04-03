@@ -29,7 +29,7 @@ const Newsletter = () => {
           </div>
           <div>
             <button onClick={()=>setShowNewsletter(true)} className="mt-2 w-full rounded border border-white py-2 px-2 text-white transition duration-200 hover:scale-90 md:mt-0 md:w-fit md:px-10">
-              Learn more
+             Subscribe
             </button>
           </div>
         </div>
