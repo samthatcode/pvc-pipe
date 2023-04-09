@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
-import "./App.css";
-import { Home, DeliveryInProgress, ConfirmSubmitRequest } from "./pages";
-import { personDetails } from "./data/index.js";
-import VerifyModal from "./components/VerifyModal";
 import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import axios from "axios";
+import { ToastContainer } from "react-toastify";
+import { PhoneNumberProvider } from "./contexts/NumberContext";
+import { PaymentMethodProvider } from "./contexts/PaymentContext";
+import "react-toastify/dist/ReactToastify.css";
+import { Home, DeliveryInProgress, ConfirmSubmitRequest } from "./pages";
 import DeliveryDetails from "./pages/DeliveryDetails";
 import DeliveryStatus from "./pages/DeliveryStatus";
-// import Verification from "./components/Verification";
-import axios from "axios";
+import Success from "./pages/Success";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   const [personDetailsInput, setpersonDetailsInput] = useState({});
@@ -19,26 +22,32 @@ function App() {
       .then((response) => {
         const data = response.data.results[0];
         setpersonDetailsInput({
-          firstName: data.name.first,
-          lastName: data.name.last,
-          photo: data.picture.large,
-          sex: data.gender,
-          phoneNumber: data.phone,
-          email: data.email,
+          firstName: data.name.first || "Davut",
+          lastName: data.name.last || "Dağlaroğlu",
+          photo:
+            data.picture.large ||
+            "https://randomuser.me/api/portraits/med/men/43.jpg",
+          sex: data.gender || "male",
+          phoneNumber: data.phone || "+2349023600083",
+          email: data.email || "davutdaglarouglu@gmail.com",
           vinNo: generateVinNo(),
           dob: new Date(data.dob.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
           }),
-          state: data.location.state,
-          lga: data.location.city,
+          state: data.location.state || "Lagos",
+          lga: data.location.city || "Kosofe",
           code: generateRandomNumber(),
-          address: `${data.location.street.name}, ${data.location.street.number}`,
-          pickupLocation: `${data.location.street.name}, ${data.location.street.number}`,
+          address:
+            `${data.location.street.name}, ${data.location.street.number}` ||
+            "4819 Tunalı Hilmi Cd",
+          pickupLocation:
+            `${data.location.street.name}, ${data.location.street.number}` ||
+            "PVC-Pipe Logistics Office",
         });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.log(error));
   }, []);
 
   // Generates a random unique 10-character VIN number
@@ -72,24 +81,31 @@ function App() {
   }
 
   return (
-    <div className="font-poppins">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/track"
-          element={<DeliveryInProgress person={personDetailsInput} />}
-        />
-        <Route
-          path="/details"
-          element={<DeliveryDetails person={personDetailsInput} />}
-        />
-        <Route
-          path="/confirm"
-          element={<ConfirmSubmitRequest person={personDetailsInput} />}
-        />
-        <Route path="/status" element={<DeliveryStatus />} />
-      </Routes>
-    </div>
+    <PhoneNumberProvider>
+      <PaymentMethodProvider>
+        <div className="font-poppins">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/track"
+              element={<DeliveryInProgress person={personDetailsInput} />}
+            />
+            <Route
+              path="/details"
+              element={<DeliveryDetails person={personDetailsInput} />}
+            />
+            <Route
+              path="/confirm"
+              element={<ConfirmSubmitRequest person={personDetailsInput} />}
+            />
+            <Route path="/status" element={<DeliveryStatus />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/*" element={<NotFoundPage />} />
+          </Routes>
+          <ToastContainer />
+        </div>
+      </PaymentMethodProvider>
+    </PhoneNumberProvider>
   );
 }
 
